@@ -1,0 +1,34 @@
+.data
+kg: .double 61
+altura: .double 1.6
+dieciocho: .double 18.5
+imc: .double 0
+estado: .word 0
+.code
+l.d f0, kg(r0)
+l.d f1, altura(r0)
+l.d f4, dieciocho(r0)
+mul.d f2, f1, f1
+daddi r2, r0, 25
+daddi r3, r0, 30 
+mtc1 r2, f5
+mtc1 r3, f6
+cvt.d.l f5, f5
+cvt.d.l f6, f6
+div.d f3, f0, f2
+s.d f3, imc(r0)
+c.lt.d f3, f4
+bc1f seguir
+daddi r4, r0, 1
+j fin
+seguir: c.lt.d f3, f5
+bc1f seguir2
+daddi r4, r0, 2
+j fin
+seguir2: c.lt.d f3, f6
+bc1f seguir3
+daddi r4, r0, 3
+j fin
+seguir3: daddi r4, r0, 4
+fin: sd r4, estado(r0)
+halt

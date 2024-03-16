@@ -1,0 +1,7 @@
+#!/bash/bin
+if [ $# != 3 ]; then
+	echo "error!! pt"
+else
+echo $1 $2 $3 "="
+echo $(($1 $2 $3))
+fi

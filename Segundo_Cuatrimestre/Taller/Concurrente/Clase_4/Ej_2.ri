@@ -1,0 +1,82 @@
+programa Ej_2
+procesos 
+  proceso tomardea5(ES cantPapeles:numero)
+  comenzar
+    cantPapeles:=0
+    mientras ((cantPapeles<5)& (PosCa<100))
+      si (HayPapelEnLaEsquina) 
+        tomarPapel
+        cantPapeles:=cantPapeles+1
+      sino
+        si (PosCa<100)
+          mover
+  fin
+areas
+  areap1: AreaP(5,1,5,100)
+  areap2: AreaP(10,1,10,100)
+  caja: AreaP(50,50,50,50)
+  cajita: AreaPC(11,1,12,1)
+robots
+  robot productor
+  variables
+    ca, av,cantPapeles:numero
+  comenzar
+    mientras (PosCa<100)
+      tomardea5(cantPapeles)
+      ca:= PosCa
+      av:= PosAv
+      si (cantPapeles=5)
+        BloquearEsquina(50,50)
+        Pos(50,50)
+        repetir 5
+          depositarPapel
+        Pos(av,ca)
+        LiberarEsquina(50,50)
+  fin
+
+  robot consumidor
+  variables
+    cantPapeles,vacio,ca,av:numero
+    vacia:boolean
+  comenzar
+    ca:= PosCa
+    av:= PosAv
+    mientras (vacio<>8)
+      Random (cantPapeles, 2, 5)
+      BloquearEsquina(50,50)
+      Pos(50,50)
+      vacia:=F
+      mientras ((cantPapeles<>0)& (~(vacia)))
+        si (HayPapelEnLaEsquina)
+          tomarPapel
+          cantPapeles:= (cantPapeles)-1
+        sino
+          vacia:= V
+          vacio:=vacio+1
+          mientras (HayPapelEnLaBolsa)
+            depositarPapel
+      si (cantPapeles=0)
+        vacio:=0
+      Pos(av,ca)
+      LiberarEsquina(50,50)
+  fin
+variables
+  p1:productor
+  p2:productor
+  c1:consumidor
+  c2:consumidor
+comenzar
+  AsignarArea(p1, areap1)
+  AsignarArea(p2, areap2)
+  AsignarArea(p1, caja)
+  AsignarArea(p2,caja)
+  AsignarArea(c1, caja)
+  AsignarArea(c2,caja)
+  AsignarArea(c1,cajita)
+  AsignarArea(c2,cajita)
+
+  Iniciar(c1, 11,1)
+  Iniciar(c2, 12,1)
+  Iniciar(p1, 5,1)
+  Iniciar(p2,10,1)
+fin

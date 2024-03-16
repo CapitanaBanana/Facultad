@@ -1,0 +1,81 @@
+programa ejercicio_1
+procesos
+  proceso tomarFlores(ES cantF:numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cantF:=cantF+1
+  fin  
+  proceso recorrerCalles(ES cantF:numero)
+  comenzar
+    repetir 9
+      tomarFlores(cantF)
+      mover
+    tomarFlores(cantF)
+  fin
+  proceso asignarnumero
+  comenzar
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,r3)
+    EnviarMensaje(4,r4)
+    EnviarMensaje(5,r5)
+    EnviarMensaje(6,r6)
+
+  fin
+areas
+  ciudad: AreaPC(1,1,100,100)
+robots
+  robot robot1
+  variables
+    cantF:numero
+    identificador:numero
+  comenzar
+    RecibirMensaje(identificador, rf)
+    cantF:=0
+    recorrerCalles(cantF)
+    EnviarMensaje(identificador,rf)
+    EnviarMensaje(cantF,rf)
+  fin
+  robot fiscalizador
+  variables
+    max:numero
+    cant:numero
+    identificador:numero
+    maxrobot:numero
+  comenzar
+    asignarnumero
+    max:=-1
+    repetir 6
+      RecibirMensaje(identificador,*)
+      RecibirMensaje(cant,*)
+      si ((cant)>(max))
+        max:= cant
+        maxrobot:=identificador
+    Informar(maxrobot)
+    Informar(max)
+  fin
+variables
+  r1:robot1
+  r2:robot1
+  r3:robot1
+  r4:robot1
+  r5:robot1
+  r6:robot1
+  rf:fiscalizador
+comenzar
+  AsignarArea(r1,ciudad)
+  AsignarArea(r2,ciudad)
+  AsignarArea(r3,ciudad)
+  AsignarArea(r4,ciudad)
+  AsignarArea(r5,ciudad)
+  AsignarArea(r6,ciudad)
+  AsignarArea(rf,ciudad)
+  Iniciar(r1, 1,1)
+  Iniciar(r2, 2,11)
+  Iniciar(rf, 2,1)
+  Iniciar (r3, 3,21)
+  Iniciar(r4, 4,31)
+  Iniciar (r5, 5,41)
+  Iniciar(r6, 6,51)
+fin

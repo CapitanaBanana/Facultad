@@ -1,0 +1,75 @@
+programa ejercicio_4
+areas
+  area10: AreaP(10,10,10,10)
+  area11: AreaP(11,11,11,11)
+  areaI: AreaPC(9,9,9,12)
+  areaJ:AreaP(1,1,1,1)
+robots
+  robot robotfisc
+  variables
+    id:numero
+  comenzar
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,r3)
+    EnviarMensaje(4,r4)
+    repetir 4
+      RecibirMensaje(id,*)
+    Informar(id)
+    Pos(11,11)
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+  robot robotito
+  variables
+    id, cainicial, avinicial,listo:numero
+  comenzar
+    listo:=0
+    RecibirMensaje(id, rf)
+    avinicial:= PosAv
+    cainicial:= PosCa
+    mientras (listo=0)
+      BloquearEsquina(10,10)
+      Pos(10, 10)
+      si (HayFlorEnLaEsquina)
+        tomarFlor
+        BloquearEsquina(11,11)
+        Pos(11,11)
+        LiberarEsquina(10,10)
+        depositarFlor
+        Pos((avinicial), (cainicial))
+        LiberarEsquina(11,11)
+      sino
+        listo:=1
+        Pos((avinicial), (cainicial))
+        EnviarMensaje(id, rf)
+  fin
+variables
+  r1:robotito
+  r2:robotito
+  r3:robotito
+  r4:robotito
+  rf:robotfisc
+comenzar
+  AsignarArea(r1,area10)
+  AsignarArea(r2,area10)
+  AsignarArea(r3,area10)
+  AsignarArea(r4,area10)
+
+  AsignarArea(r1,area11)
+  AsignarArea(r2,area11)
+  AsignarArea(r3,area11)
+  AsignarArea(r4,area11)
+  AsignarArea(rf,area11)
+  
+  AsignarArea(r1,areaI)
+  AsignarArea(r2,areaI)
+  AsignarArea(r3,areaI)
+  AsignarArea(r4,areaI)
+  AsignarArea(rf,areaJ)
+  Iniciar(r1,9,9)
+  Iniciar(r2,9,10)
+  Iniciar(r3,9,11)
+  Iniciar(r4,9,12)
+  Iniciar(rf,1,1)
+fin

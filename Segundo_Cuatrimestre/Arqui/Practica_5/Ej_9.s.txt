@@ -1,0 +1,22 @@
+.data
+letra: .asciiz "p"
+vocal: .word 3
+vocales: .asciiz "aAeEiIoOuU"
+
+.code
+ld $a0, letra($0)
+daddi $a1, $0, vocales 
+jal ES_VOCAL
+sd $v0, vocal($0)
+halt
+
+ES_VOCAL: nop
+loop: lbu $t0, 0($a1) 
+beq $t0, $a0, vocal
+daddi $a1, $a1, 1
+beqz $t0, nohayvocal
+j loop
+vocal: daddi $v0, $0, 1
+j fin
+nohayvocal: daddi $v0, $0, 0
+fin: jr $ra

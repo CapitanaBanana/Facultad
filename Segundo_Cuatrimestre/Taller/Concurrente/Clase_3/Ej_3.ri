@@ -1,0 +1,84 @@
+programa ejercicio_3
+areas
+  areaR: AreaP(2,2,10,10)
+  areaF: AreaP(1,1,1,1)
+  areaI: AreaPC(2,1,5,1)
+robots
+  robot robotfisc
+  variables
+    maxcant:numero
+    maxrob:numero
+    id:numero
+    cant:numero
+    avenida:numero
+    calle:numero
+  comenzar
+    maxcant:=-1
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,r3)
+    EnviarMensaje(4,r4)
+    Random(calle, 2,10)
+    Random(avenida, 2,10)
+    EnviarMensaje(calle,r1)
+    EnviarMensaje(calle,r2)
+    EnviarMensaje(calle,r3)
+    EnviarMensaje(calle,r4)
+    EnviarMensaje(avenida,r1)
+    EnviarMensaje(avenida,r2)
+    EnviarMensaje(avenida,r3)
+    EnviarMensaje((avenida),r4)
+    repetir 4
+      RecibirMensaje(id,*)
+      RecibirMensaje(cant,*)
+      si ((cant)> (maxcant))
+        maxcant:= cant
+        maxrob:= id
+    Informar(maxrob)
+  fin
+  robot robotito
+  variables
+    cant, id, calle, avenida, cainicial, avinicial,listo:numero
+  comenzar
+    cant:=0
+    listo:=0
+    RecibirMensaje(id, rf)
+    avinicial:= PosAv
+    cainicial:= PosCa
+    RecibirMensaje(calle,rf)
+    RecibirMensaje(avenida, rf)
+    mientras (listo=0)
+      BloquearEsquina((avenida), (calle))
+      Pos((avenida), (calle))
+      si (HayFlorEnLaEsquina)
+        cant:= cant+1
+        tomarFlor
+      sino
+        listo:=1
+      Pos((avinicial), (cainicial))
+      LiberarEsquina((avenida), (calle))
+    EnviarMensaje(id, rf)
+    EnviarMensaje(cant, rf)
+  fin
+variables
+  r1:robotito
+  r2:robotito
+  r3:robotito
+  r4:robotito
+  rf:robotfisc
+comenzar
+  AsignarArea(r1,areaR)
+  AsignarArea(r2,areaR)
+  AsignarArea(r3,areaR)
+  AsignarArea(r4,areaR)
+  AsignarArea(r1,areaI)
+  AsignarArea(r2,areaI)
+  AsignarArea(r3,areaI)
+  AsignarArea(r4,areaI)
+  AsignarArea(rf,areaF)
+  Iniciar(r1,2,1)
+  Iniciar(r2,3,1)
+  Iniciar(r3,4,1)
+  Iniciar(r4,5,1)
+  Iniciar(rf,1,1)
+fin

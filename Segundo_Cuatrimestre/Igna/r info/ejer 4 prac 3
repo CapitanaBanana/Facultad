@@ -1,0 +1,103 @@
+programa ejer4b
+procesos
+  proceso posini(ES avini:numero;ES caini:numero)
+  comenzar
+    avini:=PosAv
+    caini:=PosCa
+  fin
+  proceso recogerf(ES stop:boolean)
+  variables
+    avini:numero
+    caini:numero
+  comenzar
+    posini(avini,caini)
+    BloquearEsquina(10,10)
+    Pos(10,10)
+    si(HayFlorEnLaEsquina)
+      tomarFlor
+    sino
+      stop:=F
+    Pos(avini,caini)
+    LiberarEsquina(10,10)
+    BloquearEsquina(11,11)
+    Pos(11,11)
+    si(HayFlorEnLaBolsa)
+      depositarFlor
+    Pos(avini,caini)
+    LiberarEsquina(11,11)  
+  fin
+  proceso semueveomg
+  variables
+    avini:numero
+    caini:numero
+  comenzar
+    posini(avini,caini)
+    Pos(11,11)
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+    Pos(avini,caini)
+  fin
+areas
+  arearecoger: AreaP (10,10,10,10)
+  areadejar: AreaP(11,11,11,11)
+  espera: AreaPC(9,9,9,12)
+  silla: AreaP(1,1,1,1)
+robots
+  robot robotjefe
+  variables
+    identificador:numero
+    iultimo:numero
+  comenzar 
+    iultimo:=-1
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,r3)
+    EnviarMensaje(4,r4)
+    repetir 4
+      RecibirMensaje(identificador,*)
+      iultimo:=identificador
+    Informar(iultimo)
+    semueveomg
+  fin
+  robot robotflorero
+  variables
+    identificador:numero
+    stop: boolean
+  comenzar
+    stop:=V
+    RecibirMensaje(identificador,rf)
+    mientras(stop)
+      recogerf(stop)
+    EnviarMensaje(identificador,rf)  
+  fin 
+variables
+  rf:robotjefe
+  r1:robotflorero
+  r2:robotflorero
+  r3:robotflorero
+  r4:robotflorero
+comenzar
+  AsignarArea(rf,silla)
+  AsignarArea(rf,areadejar)
+  AsignarArea(r1,espera)
+  AsignarArea(r1,areadejar)
+  AsignarArea(r1,arearecoger)
+
+  AsignarArea(r2,espera)
+  AsignarArea(r2,areadejar)
+  AsignarArea(r2,arearecoger)
+
+  AsignarArea(r3,espera)
+  AsignarArea(r3,areadejar)
+  AsignarArea(r3,arearecoger)
+
+  AsignarArea(r4,espera)
+  AsignarArea(r4,areadejar)
+  AsignarArea(r4,arearecoger)
+
+  Iniciar(rf,1,1)
+  Iniciar(r1,9,9)
+  Iniciar(r2,9,10)
+  Iniciar(r3,9,11)
+  Iniciar(r4,9,12)
+fin

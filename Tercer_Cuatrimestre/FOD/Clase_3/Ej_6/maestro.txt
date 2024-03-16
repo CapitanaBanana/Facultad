@@ -1,0 +1,30 @@
+012 9 Negro Amarillo Verde
+25 Chaqueta de lluvia
+013 7 Blanco Gris Rojo
+20 Pantalón deportivo
+014 11 Rosa Morado
+33 Camiseta sin mangas
+015 17 Verde Negro
+42 Chaleco de lana
+001 10 Azul Verde Negro
+25 Camiseta de algodón
+002 15 Rojo Blanco
+35 Pantalón corto deportivo
+003 20 Negro
+45 Chaqueta de cuero
+004 5 Azul Blanco
+12 Gorra de béisbol
+005 8 Verde Amarillo
+29 Sudadera con capucha
+006 12 Gris
+55 Pantalón de mezclilla
+007 18 Morado Negro Rosa
+40 Camiseta de manga larga
+008 3 Blanco Rojo
+10 Bufanda de lana
+009 6 Naranja Azul Blanco
+18 Gorra de natación
+010 22 Gris Verde
+60 Pantalón de vestir
+011 14 Azul marino Blanco
+30 Polo de algodón

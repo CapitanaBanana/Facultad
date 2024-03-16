@@ -1,0 +1,114 @@
+programa ejer1prac4
+procesos
+  proceso randomf(ES cantf:numero)
+  variables
+    r:numero
+  comenzar
+    Random(r,1,4)
+    cantf:=r
+  fin
+  proceso recorrido
+  comenzar
+    mover
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+    mientras(HayFlorEnLaBolsa)
+      depositarFlor
+      mover
+  fin
+areas
+  espera: AreaP(100,100,100,100)
+  inicio: AreaPC(1,1,3,100)
+robots
+  robot cliente
+  variables
+    id:numero
+    cantf:numero
+    av:numero
+    ca:numero
+    listo:boolean
+  comenzar
+    cantf:=0
+    RecibirMensaje(id,rs)
+    mientras(PosCa<>100)
+      EnviarMensaje(id,rs)
+      randomf(cantf)
+      ca:=PosCa+1
+      EnviarMensaje(cantf,rs)
+      EnviarMensaje(ca,rs)
+      RecibirMensaje(listo,rs)
+      si(listo)
+        recorrido
+        listo:=F
+      si(PosCa=100)
+        EnviarMensaje(V,rs)
+      sino
+        EnviarMensaje(F,rs)
+  fin
+  robot servidor
+  variables
+    finalizar:numero
+    id:numero
+    flores:numero
+    pav:numero
+    pca:numero
+    chek:boolean
+    stop:boolean
+  comenzar
+    stop:=V
+    finalizar:=0
+    chek:=F  
+    EnviarMensaje(1,rc1)
+    EnviarMensaje(2,rc2)
+    EnviarMensaje(3,rc3)
+    mientras(finalizar<>3)
+      RecibirMensaje(id,*)
+      si(id=1)
+        RecibirMensaje(flores,rc1)
+        si(HayFlorEnLaBolsa)
+          RecibirMensaje(pca,rc1)         
+          Pos(1,pca)
+          repetir flores
+            depositarFlor
+          Pos(100,100)     
+          EnviarMensaje(V,rc1)  
+      sino
+        si(id=2)
+          RecibirMensaje(flores,rc2)
+          si(HayFlorEnLaBolsa)
+            RecibirMensaje(pca,rc2)
+            Pos(2,pca)
+            repetir flores
+              depositarFlor
+            Pos(100,100)
+            EnviarMensaje(V,rc2) 
+        sino
+          si(id=3)
+            RecibirMensaje(flores,rc3)
+            si(HayFlorEnLaBolsa)
+              RecibirMensaje(pca,rc3)
+              Pos(3,pca)
+              repetir flores
+                depositarFlor
+              Pos(100,100)
+              EnviarMensaje(V,rc3) 
+        RecibirMensaje(chek,*)
+        si(chek)
+          finalizar:=finalizar+1 
+  fin
+variables
+  rc1:cliente
+  rc2:cliente
+  rc3:cliente
+  rs:servidor
+comenzar
+  AsignarArea(rs,espera)
+  AsignarArea(rs,inicio)
+  AsignarArea(rc1,inicio)
+  AsignarArea(rc2,inicio)
+  AsignarArea(rc3,inicio)
+  Iniciar(rs,100,100)
+  Iniciar(rc1,1,1)
+  Iniciar(rc2,2,1)
+  Iniciar(rc3,3,1)
+fin

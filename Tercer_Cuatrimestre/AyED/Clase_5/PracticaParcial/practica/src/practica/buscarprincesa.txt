@@ -1,0 +1,13 @@
+public boolean caminonodos(ArbolBinario<Integer> a, Integer suma){
+    lista.agregarFinal(a.getdato)
+    if (a.esHoja()){
+        return true;
+    }
+    else{
+        listaGenerica<AbrolGenerico<Integer>> hijos= a.getHijos();
+        if (a.getdato()<=hijos.tamanio()){
+            caminonodos(hijos.Elemento(a.getdato()));
+        }
+    }
+    return false;
+}

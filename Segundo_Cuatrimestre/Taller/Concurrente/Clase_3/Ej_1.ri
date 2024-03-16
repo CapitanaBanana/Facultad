@@ -1,0 +1,92 @@
+programa Ejercicio_1
+procesos
+  proceso esquinaAleatoria(E a1:numero; E c1:numero; E a2:numero; E c2: numero; ES avenida:numero; ES calle:numero)
+  variables
+    auxav:numero
+    auxca:numero
+  comenzar
+    Random(auxav, a1,a2)
+    Random(auxca, c1,c2)
+    avenida:=auxav
+    calle:=auxca
+  fin
+  proceso tomarFlores
+  comenzar
+    mientras HayFlorEnLaEsquina
+      tomarFlor
+  fin
+  proceso tomarPapeles
+  comenzar
+    mientras HayPapelEnLaEsquina
+      tomarPapel
+  fin
+areas
+  areaf: AreaPC(1,1,5,10)
+  areap: AreaPC(6,1,10,9)
+  areainicio: AreaPC(6,10,9,10)
+  areadepositar: AreaPC(10,10,10,10)
+robots
+  robot florero
+  variables
+    avenida,calle,avoriginal,caoriginal:numero
+  comenzar
+    avoriginal:=PosAv
+    caoriginal:=PosCa
+    repetir 5
+      esquinaAleatoria(1,1,5,10,avenida,calle)
+      BloquearEsquina((avenida),(calle))
+      Pos((avenida),(calle))
+      tomarFlores
+      Pos((avoriginal),(caoriginal))
+      LiberarEsquina((avenida),(calle))
+    BloquearEsquina(10,10)  
+    Pos(10,10)
+    mientras HayFlorEnLaBolsa
+      depositarFlor
+    Pos((avoriginal),(caoriginal))
+    LiberarEsquina(10,10)  
+  fin
+  robot papelero
+  variables
+    avenida,calle,avoriginal,caoriginal:numero
+  comenzar
+    avoriginal:=PosAv
+    caoriginal:=PosCa
+    repetir 3
+      esquinaAleatoria(6,1,10,9,avenida,calle)
+      BloquearEsquina((avenida),(calle))
+      Pos((avenida),(calle))
+      tomarPapeles
+      Pos((avoriginal),(caoriginal))
+      LiberarEsquina((avenida),(calle))
+    BloquearEsquina(10,10)  
+    Pos(10,10)
+    mientras HayPapelEnLaBolsa
+      depositarPapel
+    Pos((avoriginal),(caoriginal))
+    LiberarEsquina(10,10)  
+  fin
+variables
+  f1:florero
+  f2:florero
+  p1:papelero
+  p2:papelero
+comenzar
+  AsignarArea(f1, areaf)
+  AsignarArea(f2, areaf)
+  AsignarArea(p1,areap)
+  AsignarArea(p2,areap)
+  AsignarArea(f1, areainicio)
+  AsignarArea(f2, areainicio)
+  AsignarArea(p1,areainicio)
+  AsignarArea(p2,areainicio)
+  AsignarArea(f1, areadepositar)
+  AsignarArea(f2, areadepositar)
+  AsignarArea(p1,areadepositar)
+  AsignarArea(p2,areadepositar)
+
+  Iniciar(f1, 6,10)
+  Iniciar(f2, 7,10)
+  Iniciar(p1, 8,10)
+  Iniciar(p2, 9,10)
+fin

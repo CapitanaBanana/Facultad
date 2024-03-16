@@ -1,0 +1,8 @@
+1 12.00
+2 2  reloj
+2 54.00
+4 1  pulsera
+4 17.00
+1 4  caramelo
+6 9.00
+2 3  celular

@@ -1,0 +1,7 @@
+1 4 hola
+1 3 quetal
+1 4 comova
+5 9 pepepepep
+5 8 jdhsd
+12 3 si
+12 5 soymint

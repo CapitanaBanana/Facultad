@@ -1,0 +1,12 @@
+8 43.00  terror
+novela 1
+9 32.50  drama
+novela 22
+12 34.50  comedia
+novela 3
+921 12.20  suspenso
+novela 4
+43 19.40 amor
+novela 5
+55 654.00 terror
+novela 6

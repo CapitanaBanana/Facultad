@@ -1,0 +1,6 @@
+-4 | fabri
+43 | mint
+89 | igna
+0 | null
+-3 | prueba
+76 | jose}

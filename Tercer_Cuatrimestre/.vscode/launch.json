@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "prueba",
+            "request": "launch",
+            "mainClass": "tp02.ejercicio3.prueba",
+            "projectName": "ListasGenericas"
+        },
+        {
+            "name": ".NET Core Launch (console)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${file}",
+            "outFiles": [
+                "${workspaceFolder}/**/*.js"
+            ],
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": ".NET Core Attach",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ]
+}

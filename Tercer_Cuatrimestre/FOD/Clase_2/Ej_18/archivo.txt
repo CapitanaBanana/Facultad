@@ -1,0 +1,84 @@
+1 La Plata
+101 La Plata
+201 Hospital Italiano
+15 03 2022 25
+1 La Plata
+101 La Plata
+201 Hospital Italiano
+15 03 2022 25
+1 La Plata
+101 La Plata
+201 Hospital Italiano
+15 03 2022 25
+1 La Plata
+101 La Plata
+204 Hospital de niños
+15 03 2022 25
+2 Mar del Plata
+201 General Pueyrredón
+301 Hospital Privado de Comunidad
+16 03 2022 17
+3 Bahía Blanca
+301 Bahía Blanca
+401 Hospital Municipal Dr. Leónidas Lucero
+17 03 2022 10
+4 Luján
+401 Luján
+501 Hospital Nuestra Señora de Luján
+18 03 2022 30
+4 Luján
+401 Luján
+501 Hospital Nuestra Señora de Luján
+18 03 2022 1700
+5 Tandil
+501 Tandil
+601 Hospital Ramón Santamarina
+19 03 2022 12
+6 San Nicolás de los Arroyos
+601 San Nicolás
+701 Hospital San Felipe
+20 03 2022 8
+6 San Nicolás de los Arroyos
+601 San Nicolás
+704 Hospital San Jose
+21 03 2022 2
+7 Trenque Lauquen
+701 Trenque Lauquen
+801 Hospital Municipal Pedro T. Orellana
+21 03 2022 5
+8 San Pedro
+801 San Pedro
+901 Hospital San Pedro
+22 03 2022 19
+9 Azul
+901 Azul
+101 Hospital Pintos
+23 03 2022 11
+10 Olavarría
+101 Olavarría
+201 Hospital Municipal Héctor M. Cura
+24 03 2022 22
+11 Junín
+201 Junín
+301 Hospital Interzonal General de Agudos Dr. Abraham Piñeyro
+25 03 2022 14
+12 Pergamino
+301 Pergamino
+401 Hospital San José
+26 03 2022 7
+13 Quilmes
+401 Quilmes
+501 Hospital Isidoro Iriarte
+27 03 2022 16
+14 Necochea
+501 Necochea
+601 Hospital Dr. Emilio Ferreyra
+28 03 2022 3
+15 Morón
+601 Morón
+701 Hospital de Morón
+29 03 2022 20
+15 Morón
+601 Morón
+701 Hospital de Morón
+29 03 2022 1800

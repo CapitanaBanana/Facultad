@@ -1,0 +1,59 @@
+#!/bin/bash
+
+existe(){
+	if [ $# -ne 1 ]; then
+		exit 1
+	fi
+	for i in ${arreglo[*]}; do
+		if [ $1 = $i ]; then
+			return 0
+			echo existe
+		fi
+	done
+	return 1
+}
+eliminar_usuario(){
+	if [ $# -ne 1 ]; then
+		exit 1
+	fi
+	pos=0
+	for i in ${arreglo[*]}; do
+		if [ $1 = $i ]; then
+			unset $arreglo[$pos]
+			echo elimine
+			return 0
+		fi
+	done
+	return 2
+}
+usuarios_con_patron(){
+	if [ $# -ne 1 ]; then
+		exit 1
+	fi
+	for i in ${arreglo[*]}; do
+		if [ $i = "*$1*" ]
+			echo $1
+		fi
+	done
+}
+cantidad(){
+	echo "cantidad: ${#arreglo[*]}"
+}
+usuarios(){
+	echo ${#arreglo[*]}
+}
+
+arreglo=($(cat /etc/passwd | cut -d: -f1))
+select opcion in cantidad usuarios existe eliminar patron: do
+	case $opcion in
+		cantidad) cantidad ;;
+		usuarios) usuarios ;;
+		existe) read cant
+			existe $cant ;;
+		eliminar) read elim
+			eliminar_usuario $elim ;;
+		patron) read pat
+			usuarios_con_patron $pat ;;
+	esac
+done
+

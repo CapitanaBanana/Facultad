@@ -1,0 +1,5 @@
+ | numero: 2 | apellido: melo | nombre: ignacio | edad: 21 | dni:2
+ | numero: 3 | apellido: osti | nombre: josefina | edad: 1 | dni:9
+ | numero: 9 | apellido: perez | nombre: thiago | edad: 21 | dni:7
+ | numero: 5 | apellido: perri | nombre: fabrizio | edad: 32 | dni:1
+ | numero: 8 | apellido: mal | nombre: joaco | edad: 98 | dni:23
