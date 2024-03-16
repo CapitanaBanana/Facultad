@@ -1,0 +1,8 @@
+Provincia: Chaco| cant: 12| enc: 17
+Provincia: Entre Rios| cant: 13| enc: 22
+Provincia: Formosa| cant: 4| enc: 6
+Provincia: Jujuy| cant: 29| enc: 49
+Provincia: La Pampa| cant: 29| enc: 39
+Provincia: Misiones| cant: 24| enc: 43
+Provincia: Salta| cant: 5| enc: 32
+Provincia: Santa Fe| cant: 13| enc: 28

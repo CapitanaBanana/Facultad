@@ -1,0 +1,15 @@
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\bin\Debug\net7.0\Teoria_5.exe
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\bin\Debug\net7.0\Teoria_5.deps.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\bin\Debug\net7.0\Teoria_5.runtimeconfig.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\bin\Debug\net7.0\Teoria_5.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\bin\Debug\net7.0\Teoria_5.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.csproj.AssemblyReference.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.AssemblyInfoInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.AssemblyInfo.cs
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.csproj.CoreCompileInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\refint\Teoria_5.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\Teoria_5.genruntimeconfig.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Teoria_5\obj\Debug\net7.0\ref\Teoria_5.dll

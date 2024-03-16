@@ -1,0 +1,46 @@
+programa Ejercicio2
+procesos
+  proceso moverse
+  comenzar
+    repetir 20
+      mover
+  fin
+areas
+  Ciudad : AreaC(10,10,30,30)
+robots
+  robot r1
+  comenzar 
+    moverse
+  fin
+  robot r2
+  comenzar 
+    derecha
+    moverse
+  fin
+  robot r3
+  comenzar 
+    repetir 2
+      derecha
+    moverse
+  fin
+  robot r4
+  comenzar 
+    repetir 3
+      derecha
+    moverse
+  fin
+variables
+  R1: r1
+  R2: r2
+  R3: r3
+  R4: r4
+comenzar
+  AsignarArea(R1, Ciudad)
+  AsignarArea(R2, Ciudad)
+  AsignarArea(R3, Ciudad)
+  AsignarArea(R4, Ciudad)
+  Iniciar(R1, 10,10)
+  Iniciar(R2, 10,30)
+  Iniciar(R3, 30,30)
+  Iniciar(R4, 30,10)
+fin

@@ -1,0 +1,64 @@
+programa Ejercicio3
+procesos
+  proceso limpiarEsquina(ES cantFlores: numero; ES cantPapeles:numero)
+  comenzar
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+      cantPapeles:= cantPapeles+1
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+      cantFlores:=cantFlores+1
+    mientras (HayFlorEnLaBolsa)
+      depositarFlor
+    mientras (HayPapelEnLaBolsa)
+      depositarPapel
+  fin
+  proceso escalon(E altura: numero; ES cumple:numero)
+  variables
+    cantPapeles:numero
+    cantFlores:numero
+  comenzar
+    cantFlores:=0
+    cantPapeles:=0
+    repetir 2
+      repetir (altura) 
+        si (((PosCa)<100) & ((PosAv)<100))
+          limpiarEsquina(cantFlores,cantPapeles) 
+          mover
+      derecha
+    si (cantPapeles= ((cantFlores)+1))
+      cumple:=(cumple)+1
+  fin
+  proceso escalerita
+  variables
+    cumple:numero
+    altura:numero
+  comenzar
+    cumple:=0
+    altura:=1
+    repetir 13
+      escalon(altura,cumple)
+      altura:=altura+1
+      repetir 2
+        derecha
+    Informar (cumple)
+  fin
+areas
+  ciudad: AreaC(1,1,100,100)
+robots
+  robot robotito
+  comenzar
+    escalerita
+  fin
+variables
+  r1: robotito
+  r2: robotito
+  r3: robotito
+comenzar
+  AsignarArea(r1, ciudad)
+  AsignarArea(r2, ciudad)
+  AsignarArea(r3, ciudad)
+  Iniciar(r1, 12, 14)
+  Iniciar(r2, 17, 10)
+  Iniciar(r3, 22, 6)
+fin

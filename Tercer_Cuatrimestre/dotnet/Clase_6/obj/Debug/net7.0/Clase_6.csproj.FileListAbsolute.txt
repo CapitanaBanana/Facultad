@@ -1,0 +1,15 @@
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\bin\Debug\net7.0\Clase_6.exe
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\bin\Debug\net7.0\Clase_6.deps.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\bin\Debug\net7.0\Clase_6.runtimeconfig.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\bin\Debug\net7.0\Clase_6.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\bin\Debug\net7.0\Clase_6.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.csproj.AssemblyReference.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.AssemblyInfoInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.AssemblyInfo.cs
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.csproj.CoreCompileInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\refint\Clase_6.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\Clase_6.genruntimeconfig.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\Clase_6\obj\Debug\net7.0\ref\Clase_6.dll

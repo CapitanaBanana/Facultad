@@ -1,0 +1,24 @@
+.data 
+CONTROL: .word 0x10000 
+DATA: .word 0x10008    
+car: .byte 0                        
+.text 
+ld $s0, DATA($zero) # $s0 = dirección de DATA
+ld $s1, CONTROL($zero) # $s1 = dirección de CONTROL
+daddi $t0, $zero, 6 # $t0 = 6 -> función 6: limpiar pantalla alfanumérica 
+sd $t0, 0($s1) # CONTROL recibe 6 y limpia la pantalla
+daddi $t1, $0, 0x0D
+jal mensaje
+halt
+
+mensaje: daddi $t0, $zero, 9 
+sd $t0, 0($s1) # CONTROL recibe 9 y espera caracter
+ld $t2, 0($s0)
+beq $t2, $t1, fin
+sd $t2, car($0)
+daddi $t3, $0, car
+sd $t3, 0($s0)
+daddi $t0, $0, 4
+sd $t0, 0($s1)
+j mensaje
+fin: jr $ra

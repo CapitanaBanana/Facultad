@@ -1,0 +1,15 @@
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\bin\Debug\net7.0\CalculoSimple.exe
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\bin\Debug\net7.0\CalculoSimple.deps.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\bin\Debug\net7.0\CalculoSimple.runtimeconfig.json
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\bin\Debug\net7.0\CalculoSimple.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\bin\Debug\net7.0\CalculoSimple.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.csproj.AssemblyReference.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.AssemblyInfoInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.AssemblyInfo.cs
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.csproj.CoreCompileInputs.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\refint\CalculoSimple.dll
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.pdb
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\CalculoSimple.genruntimeconfig.cache
+C:\Users\Capi\Desktop\Facultad\Tercer-cuatri\dotnet\CalculoSimple\obj\Debug\net7.0\ref\CalculoSimple.dll

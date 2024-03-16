@@ -1,0 +1,8 @@
+Chaco
+4 10 12
+Jujuy
+3 15 17
+La Pampa
+1 10 15
+Misiones
+2 6 19

@@ -1,0 +1,8 @@
+codigo: 1 nombre: pepe
+ total: 17.00
+codigo: 4 nombre: juan
+ total: 4.00
+codigo: 7 nombre: igna
+ total: 4.00
+codigo: 9 nombre: lucas
+ total: 1.00

@@ -1,0 +1,16 @@
+#!/bin/bash
+echo "ingrese el primer numero"
+read a
+echo "ingrese el segundo numero"
+read b
+
+echo "a*b= $((a * b))" 
+echo "a+b= $((a + b))"
+echo "a-b= $((a - b))"
+if [ $a -gt $b ]; then
+	echo "a<b"
+elif [ $b -gt $a ]; then
+	echo "b<a"
+else
+	echo "iguales"
+fi

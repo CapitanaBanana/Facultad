@@ -1,0 +1,145 @@
+programa ejer6
+procesos
+  proceso recogerf
+  comenzar
+    mientras(HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+  proceso recogerp
+  comenzar
+    mientras(HayPapelEnLaEsquina)
+      tomarPapel
+  fin
+  proceso dejarf
+  comenzar
+    si(HayFlorEnLaBolsa)
+      depositarFlor
+  fin
+  proceso dejarp
+  comenzar
+    si(HayPapelEnLaBolsa)
+      depositarPapel
+  fin
+  proceso recorrer1
+  comenzar
+    repetir 4
+      repetir 6
+        recogerf
+        mover
+      recogerf
+      derecha
+  fin
+  proceso recorrer2
+  comenzar
+    repetir 4
+      repetir 10
+        recogerf
+        recogerp
+        mover
+      recogerf
+      recogerp
+      derecha
+  fin
+  proceso recorrer3
+  comenzar
+    repetir 4
+      repetir 7
+        recogerp
+        mover
+      recogerp  
+      derecha
+  fin
+  proceso volver(E ca:numero)
+  comenzar
+    Pos(ca,1)
+  fin
+  proceso carrera
+  comenzar
+    mientras((HayFlorEnLaBolsa)|(HayPapelEnLaBolsa) & (PosCa<100))
+      si(HayFlorEnLaBolsa)
+        depositarFlor
+      si(HayPapelEnLaBolsa)
+        depositarPapel
+      mover
+  fin
+areas
+  ciudad: AreaPC(2,2,16,16)
+  carrera: AreaPC(20,1,22,100)
+  silla: AreaP(1,1,1,1)
+robots 
+  robot robotfiscalizador
+  variables
+    identificador:numero
+    ca:numero
+  comenzar
+    ca:=20
+    EnviarMensaje(1,r1)
+    EnviarMensaje(2,r2)
+    EnviarMensaje(3,r3)
+    repetir 3
+      RecibirMensaje(identificador,*)
+      si(identificador=1)
+        EnviarMensaje(ca,r1)
+        ca:=ca+1
+      sino
+        si(identificador=2)
+          EnviarMensaje(ca,r2)
+          ca:=ca+1
+        sino
+          EnviarMensaje(ca,r3)
+          ca:=ca+1
+  fin
+  robot robot1
+  variables
+    identificador:numero
+    ca:numero
+  comenzar
+    RecibirMensaje(identificador,rf)
+    recorrer1
+    EnviarMensaje(identificador,rf)
+    RecibirMensaje(ca,rf)
+    volver(ca)
+    carrera
+  fin
+  robot robot2
+  variables
+    identificador:numero
+    ca:numero
+  comenzar
+    RecibirMensaje(identificador,rf)
+    recorrer2
+    EnviarMensaje(identificador,rf)
+    RecibirMensaje(ca,rf)
+    volver(ca)
+    carrera
+  fin
+  robot robot3
+  variables
+    identificador:numero
+    ca:numero
+  comenzar
+    RecibirMensaje(identificador,rf)
+    recorrer3
+    EnviarMensaje(identificador,rf)
+    RecibirMensaje(ca,rf)
+    volver(ca)
+    carrera
+  fin
+variables
+  rf: robotfiscalizador
+  r1: robot1
+  r2: robot2
+  r3: robot3
+comenzar
+  AsignarArea(rf,silla)
+  AsignarArea(r1,ciudad)
+  AsignarArea(r2,ciudad)
+  AsignarArea(r3,ciudad)
+  AsignarArea(r1,carrera)
+  AsignarArea(r2,carrera)
+  AsignarArea(r3,carrera)
+  Iniciar(rf,1,1)
+  Iniciar(r1,2,2)
+  Iniciar(r2,5,5)
+  Iniciar(r3,9,9)
+fin

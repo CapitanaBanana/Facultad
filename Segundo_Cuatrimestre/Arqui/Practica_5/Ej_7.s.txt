@@ -1,0 +1,24 @@
+.data
+M: .word 20
+TABLA: .word 21 20 15 10 7 30
+CANT: .word 6
+CONTEO: .word 0
+
+.code
+ld $a0, M($zero) #M en a0
+ld $a1, TABLA($zero) #tabla en a1
+ld $a2, CANT($zero) #cant en a2
+jal SUBRUTINA
+sd $v0, CONTEO($0)
+halt
+SUBRUTINA: daddi $v0, $zero, 0 #contador en 0
+daddi $t0, $0,0 #desplazamiento en 0
+loop: ld $t1, 0($a1) #cargo primera pos de la tabla
+slt $t3, $t1, $a0
+bnez $t3, seguir
+daddi $v0, $v0, 1
+seguir: daddi $t0, $t0, 1
+slt $t3, $t0, $a2 #comparo desplazamiento y cant
+daddi $a1, $a1, 1
+bnez $t3, loop
+jr $ra

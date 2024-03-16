@@ -1,0 +1,8 @@
+#!/bin/bash
+arreglo=(a b c d e)
+echo ${#arreglo[*]}
+echo ${arreglo[*]}
+echo "Borrado: "
+unset $arreglo[3]
+echo ${#arreglo[*]}
+echo ${arreglo[*]}

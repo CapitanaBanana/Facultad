@@ -1,0 +1,6 @@
+32 54.00 motorola
+0 3 esta
+moto j
+87 32.00 samsung
+0 9 baratito
+a51

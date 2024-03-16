@@ -1,0 +1,65 @@
+programa Ej_4
+procesos
+  proceso limpiarFloresEsquina
+  comenzar  
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+  fin
+  proceso limpiarPapelesEsquina
+  comenzar  
+    mientras (HayPapelEnLaEsquina)
+      tomarPapel
+  fin
+  proceso limpiarAreasFlores(E desde: numero; E hasta:numero)
+  variables 
+    i:numero
+  comenzar
+    Pos(desde,1)
+    mientras ((desde) <= (hasta))
+      repetir 99
+        limpiarFloresEsquina
+        mover 
+      limpiarFloresEsquina
+      desde:=desde+1
+      Pos (desde, 1)
+  fin
+  proceso limpiarAreasPapeles(E desde: numero; E hasta:numero)
+  variables 
+    i:numero
+  comenzar
+    Pos(desde,1)
+    mientras ((desde) <= (hasta))
+      repetir 99
+        limpiarPapelesEsquina
+        mover 
+      desde:=desde+1
+      limpiarPapelesEsquina
+      Pos (desde, 1)
+  fin
+areas
+  Area1: AreaP(1,1,25,100)
+  Area2: AreaP(26,1,50,100)
+  Area3: AreaP(51,1,75,100)
+  Area4: AreaP(76,1,100,100)
+robots
+  robot robotFlores
+  comenzar
+    limpiarAreasFlores(1,25)
+    limpiarAreasFlores(51,75)
+  fin
+  robot robotPapeles
+  comenzar
+    limpiarAreasPapeles(26,50)
+    limpiarAreasPapeles(76,100)
+  fin
+variables
+  r1 : robotFlores
+  r2 : robotPapeles
+comenzar
+  AsignarArea(r1, Area1)
+  AsignarArea(r1, Area3)
+  AsignarArea(r2, Area2)
+  AsignarArea(r2, Area4)
+  Iniciar(r1,1,1)
+  Iniciar(r2,26,1)
+fin

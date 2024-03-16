@@ -1,0 +1,16 @@
+.data
+base: .double 5.85
+altura: .double 13.47
+area: .double 0
+
+.code
+l.d f0, base(r0)
+l.d f1, altura(r0)
+mul.d f2, f0, f1
+daddi r1, r0, 2
+mtc1 r1, f3
+cvt.d.l f3,f3
+div.d f2, f2, f3
+s.d f2, area(r0)
+
+halt

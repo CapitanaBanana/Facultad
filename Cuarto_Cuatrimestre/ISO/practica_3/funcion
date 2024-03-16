@@ -1,0 +1,11 @@
+#!/bin/bash
+function promedio() {
+    local a b
+
+    read -p "Ingresa el primer número: " a
+    read -p "Ingresa el segundo número: " b
+    c=(a + b)
+    echo ($c / 2)
+}
+
+promedio $a $b

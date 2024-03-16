@@ -1,0 +1,6 @@
+#!/bin/bash
+if [ $# != 2 ]; then
+	echo "error!! faltan parametros"
+else
+	echo "a+b= $(($1 + $2))"
+fi

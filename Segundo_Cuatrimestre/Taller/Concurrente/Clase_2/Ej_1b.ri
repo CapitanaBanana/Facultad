@@ -1,0 +1,58 @@
+programa ejercicio_1
+procesos
+  proceso tomarFlores(ES cantF:numero)
+  comenzar
+    mientras (HayFlorEnLaEsquina)
+      tomarFlor
+      cantF:=cantF+1
+  fin  
+  proceso recorrerCalles(ES cantF:numero)
+  comenzar
+    repetir 9
+      tomarFlores(cantF)
+      mover
+    tomarFlores(cantF)
+  fin
+  proceso ganador(E f1:numero;E f2:numero; ES diferencia:numero)
+  comenzar
+    si ((f2)>(f1))
+      diferencia:= (f2)-(f1)
+    si ((f1)>(f2))
+      diferencia:= (f1)-(f2)
+  fin
+areas
+  ciudad1: AreaP(1,1,1,10)
+  ciudad2: AreaP(2,11,2,20)
+  ciudad3: AreaP(2,1,2,1)
+robots
+  robot robot1
+  variables
+    cantF:numero
+  comenzar
+    cantF:=0
+    recorrerCalles(cantF)
+    EnviarMensaje(cantF,rf)
+  fin
+  robot fiscalizador
+  variables
+    cantF2:numero
+    cantF1:numero
+    diferencia:numero
+  comenzar
+    RecibirMensaje(cantF1,r1)
+    RecibirMensaje(cantF2,r2)
+    ganador(cantF1,cantF2,diferencia)
+    Informar(diferencia)
+  fin
+variables
+  r1:robot1
+  r2:robot1
+  rf:fiscalizador
+comenzar
+  AsignarArea(r1,ciudad1)
+  AsignarArea(r2,ciudad2)
+  AsignarArea(rf,ciudad3)
+  Iniciar(r1, 1,1)
+  Iniciar(r2, 2,11)
+  Iniciar(rf, 2,1)
+fin
