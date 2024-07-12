@@ -1,0 +1,39 @@
+EMT 1--------- Nota:7.5
+	
+Lo siguiente da una idea de las respuestas y resolución de los ejercicios para todos los alumnos, no está indicando errores particulares.
+
+1- Todas Falsas
+
+2-
+
+línea 2 error sintáctico, en compilación
+
+linea 10 error semántico, en compilación
+
+línea 11 error semántico, en compilación
+
+línea 13 error semántico, en ejecución
+
+linea 14 error semántico, en ejecución
+
+3-
+
+Debía indicar bnf, ebnf y diagramas sintácticos.
+
+Se debían identificar claramente las diferencias entre estos.
+
+4-
+
+Línea 1 automática, global
+
+linea 2 automática, global
+
+linea 6 automática, local
+
+línea 7 estática, local
+
+línea 8 automática, local
+
+línea 9 dinámica, local
+
+Se esperaba que indiquen características de los atributos de variables o bien del tipo según su momento de alocación.

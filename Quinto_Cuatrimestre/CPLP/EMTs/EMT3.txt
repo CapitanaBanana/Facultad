@@ -1,0 +1,14 @@
+EMT 3--------- Nota:8
+
+1- M
+
+V F F
+
+2- B
+
+La intención aquí es que describieran conceptualmente que significaba la sentencia de selección. Sin embargo también se esperaba que respondieran a las situaciones de este código en particular considerando la clausula default y el uso de break y respondiendo en el estado en que quedaban las variables al finalizar el código en cada uno de los casos establecidos.
+
+3- B
+
+En este punto, se debían resaltar puntualmente las diferentes características de uno y otro paradigma respecto de la transparencia referencia. en términos de la seguridad del código en cuanto a su ejecución. No alcanza con reconocer un paradigma de otro y se esperaba resaltar esta diferencia para uno y otro caso.
+
