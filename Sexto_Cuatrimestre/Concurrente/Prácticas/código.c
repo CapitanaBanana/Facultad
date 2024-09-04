@@ -93,3 +93,27 @@ process coordinador[]{
     <await (ocupada==false && cola.lenght > 0), siguiente = pop cola>
    }
 }
+
+int arribo[1:n]=([n]0), ejecutar[1:n]=([n]0)
+process coordinador[]{ 
+  while (true) {
+  for [i=1..n]{
+    while (arribo[i]==0) skip{//CONSULTAR, no sería un if???? sino es re estúpido porque se queda esperando a que sea 1, sin avanzar al siguiente número del for
+      ejecutar[i]=1
+      while (ejecutar[i]==1) skip{
+        arribo[i]=0
+      }
+    }
+  }
+  }
+}
+
+process proceso[id:0..n]{ 
+  while (true) { 
+    arribo[i]=1
+    while (ejecutar[i]==0) skip{
+      Sección crítica
+      ejecutar[i]=0
+    }
+  }
+}
