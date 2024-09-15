@@ -592,3 +592,138 @@ process armadores[0..1]
     //armar ventana
   }
 }
+/*
+10. A una cerealera van T camiones a descargarse trigo y M camiones a descargar maíz. Sólo 
+hay lugar para que 7 camiones a la vez descarguen, pero no pueden ser más de 5 del mismo 
+tipo de cereal.
+a) Implemente una solución que use un proceso extra que actúe como coordinador 
+entre los camiones. El coordinador debe retirarse cuando todos los camiones han 
+descargado.
+b) Implemente una solución que no use procesos adicionales (sólo camiones).
+*/
+
+//no se como plantear este, preguntaaaaaaaar
+10a-
+int cantTrigo=T, cantMaiz=M; 
+mutex mutexTrigo=0, mutexMaiz=0; mCantMaiz=1, mCantTrigo=1; mCantTotal=1;
+int actualTrigo=0, actualMaiz=0;
+
+process coordinador
+{
+  int cantActual=0;
+  while(cantTrigo>0 || cantMaiz>0){
+   if(cantActual<7){
+    cantActual++;
+    if (actualTrigo<5){
+      v(mutexTrigo);
+      cantTrigo--;
+      actualTrigo++;
+    }
+    else if (actualMaiz<5){
+      v(mutexMaiz);
+      cantMaiz--;
+      actualMaiz++;
+    }
+    cantActual++;
+  }
+  //retirarse
+}
+}
+process camionTrigo[0..T-1]
+{
+  p(mutexTrigo);
+  //descargar
+  p(mCantTrigo);
+  actualTrigo--;
+  v(mCantTrigo);
+  p(mCantTotal);
+  cantActual--;
+  v(mCantTotal);
+
+}
+  
+process camionMaiz[0..M-1]
+{
+ p(mutexMaiz);
+ //descargar
+  p(mCantMaiz);
+  actualMaiz--;
+  v(mCantMaiz);
+  p(mCantTotal);
+  cantActual--;
+  v(mCantTotal);
+}
+
+10b-
+int cantTrigo=0, cantMaiz=0; 
+mutex mutexTrigo=1, mutexMaiz=1;
+sem mutex=7
+
+process camionTrigo[0..T-1]
+{
+  p(mutexTrigo);
+  if (cantTrigo<5){
+    cantTrigo++;
+    v(mutexTrigo);
+    p(mutex);
+    //descargar
+    p(mutexTrigo);
+    cantTrigo--;
+    v(mutex);
+  }
+    v(mutexTrigo);
+}
+  
+process camionMaiz[0..M-1]
+{
+  p(mutexMaiz);
+  if (cantMaiz<5){
+    cantMaiz++;
+    v(mutexMaiz);
+    p(mutex);
+    //descargar
+    p(mutexMaiz);
+    cantMaiz--;
+    v(mutex);
+  }
+    v(mutexMaiz);
+}
+  
+/*
+11.En un vacunatorio hay un empleado de salud para vacunar a 50 personas. El empleado de salud atiende a las personas de acuerdo con el orden de llegada y de a 5 personas a la vez. Es decir, que cuando está libre debe esperar a que haya al menos 5 personas esperando, luego vacuna a las 5 primeras personas, y al terminar las deja ir para esperar  por otras 5. Cuando ha atendido a las 50 personas el empleado de salud se retira. Nota:todos los procesos deben terminar su ejecución; suponga que el empleado tienen una función VacunarPersona() que simula que el empleado está vacunando a UNA persona. 
+*/
+11-
+//preguntar si esta bien
+cola personas[50];
+sem mutex=1, mutexCola=1, hayAlguien=0; vacunar[0..50]=([50]0);, continuar=0;
+
+process persona[0..49]
+{
+  P(mutexCola);
+  push(personas, id);
+  v(hayAlguien);
+  V(mutexCola);
+  p(vacunar[id]);  
+  //vacunando
+  v(continuar);
+}
+process empleado
+{
+  int cant=0; int cantGrupo=0; int personas[5];
+  while (cant<50){
+   while (cantGrupo<5){
+    P(hayAlguien);
+    P(mutexCola);
+      personas[cantGrupo]= pop(personas);
+      cant++;
+      cantGrupo++;
+    V(mutexCola);
+    }
+    cantGrupo=0;
+    for (int i=0; i<5; i++){
+      V(Vacunar(personas[i]));
+      VacunarPersona();
+      p(continuar);
+    }
+  }
+}
