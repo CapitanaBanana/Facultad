@@ -5,26 +5,27 @@ seed_phrase = "vital power drama odor mix involve list rate tenant pottery steel
 coin = Bitcoin(testnet=True)
 wallet = coin.wallet(seed=seed_phrase)
 
-#No encontré como hacer esto sin hardcodearlo, pq con new_receiving_address() entiendo que creo una nueva dirección y yo lo que quiero es recuerar las que ya tenía creadas(o no entendí algo, que es probable también je)
-addr1 = 'mzWXzo4Y859u44PuRSGQ34QdQ1EgQsEDWe'
-
-addr2 = 'msgkPaNwLb9CTiPoNudggR8HsArwBh95q7'
+addr1 = wallet.new_receiving_address()
+addr2 = wallet.new_change_address()
 
 
 def balance_calculation(address):
-  inputs = coin.unspent(address)
-  total = 0
-  for i in inputs:
-    total += i['value']
-  return total
+    inputs = coin.unspent(address)
+    total = 0
+    for i in inputs:
+        total += i['value']
+    return total
+
 
 # Blances antes de la transacción
 balance_addr1_before = balance_calculation(addr1)
-print(f"Balance de la dirección 1 antes de la transacción: {balance_addr1_before} satoshi")
+print(f"Balance de la dirección 1 antes de la transacción: {
+      balance_addr1_before} satoshi")
 
 
 balance_addr2_before = balance_calculation(addr2)
-print(f"Balance de la dirección 2 antes de la transacción: {balance_addr2_before} satoshis")
+print(f"Balance de la dirección 2 antes de la transacción: {
+      balance_addr2_before} satoshis")
 
 
 # Esto hace que explote todo, me tira timeout y no se como solucionarlo :(
@@ -37,8 +38,9 @@ else:
 
 # Blances después de la transacción
 balance_addr1_after = balance_calculation(addr1)
-print(f"Balance de la dirección 1 después de la transacción: {balance_addr1_after} satoshi")
+print(f"Balance de la dirección 1 después de la transacción: {
+      balance_addr1_after} satoshi")
 
 balance_addr2_after = balance_calculation(addr2)
-print(f"Balance de la dirección 2 después de la transacción: {balance_addr2_after} satoshis")
-
+print(f"Balance de la dirección 2 después de la transacción: {
+      balance_addr2_after} satoshis")
