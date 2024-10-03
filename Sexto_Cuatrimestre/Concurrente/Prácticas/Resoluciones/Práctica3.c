@@ -317,3 +317,80 @@ process Cliente[0..N-1]{
 process Empleado{
 
 }
+
+/*6. Existe una comisión de 50 alumnos que deben realizar tareas de a pares, las cuales son corregidas por un JTP. Cuando los alumnos llegan, forman una fila. Una vez que están todos en fila, el JTP les asigna un número de grupo a cada uno. Para ello, suponga que existe una función AsignarNroGrupo() que retorna un número “aleatorio” del 1 al 25. Cuando un alumno ha recibido su número de grupo, comienza a realizar su tarea. Al terminarla, el alumno le avisa al JTP y espera por su nota. Cuando los dos alumnos del grupo completaron la tarea, el JTP les asigna un puntaje (el primer grupo en terminar tendrá como nota 25, el segundo 24, y así sucesivamente hasta el último que tendrá nota 1). Nota: el JTP no guarda el número de grupo que le asigna a cada alumn */
+6-
+Monitor Tarea{
+  cond espera[50]; esperaJTP, entregarNota; EsperarNota[50]
+  fila filaAlumnos;
+  int terminados[25];
+  int alumnosConGrupo=0;
+  int nroAsig[50] = ([50] = -1);
+  int GruposTerminados[25] = ([50] = 0);
+  int Nota[50] = ([50] = 0);
+  int cantRestante=25;
+  int cant=0;
+
+  procedure esperarAlumnos{
+    while(cant<50){
+      wait(esperaJTP);
+    }
+  }
+  procedure llegar(idAlumno:int in){
+    cant++;
+    wait(espera[idAlumno])
+    filaAlumnos.push(idAlumno)
+    if(cant==50)
+    {
+      signal(esperaJTP)
+    }
+  }
+  procedure enviarNro(nroGrupo:int in){
+    nroAsig[idAlumno]=AsignarNroGrupo;
+    signal(espera[idAlumno])
+    alumnosConGrupo++;
+    if(alumnosConGrupo==50){
+      wait(entregarNota)
+    }
+    
+  }
+  procedure recibirGrupo(out int nroGrupo; idAlumno){
+    nroGrupo=nroAsig[idAlumno];
+  }
+  procedure termine(nroGrupo: int in){
+    GruposTerminados[nroGrupo]++;
+    wait(EsperarNota[idAlumno]);
+    if GruposTerminados[nroGrupo]==2{
+      signal(entregarNota);
+    }
+  }
+  procedure darNota(nota: int in; idAlumno: int in){
+    Nota[idAlumno]=nota;
+    signal(EsperarNota[idAlumno]);
+  }
+  tarea.recibirNota(nota: int out; idAlumno: int in){
+    nota= Nota[idAlumno];
+  }
+}
+
+process JTP{
+  esperarAlumnos();
+  for(int i=0; i<49;i++){
+    int aux=AsignarNroGrupo;
+    tarea.enviarNro(aux)
+  }
+  for(int i=25; i>0;i--){
+    tarea.darNota(i)
+  }
+}
+process alumno{
+  int nroGrupo; nota;
+  Tarea.llegar(idAlumno);
+  Tarea.recibirGrupo(nroGrupo, idAlumno);
+  //realizarTarea
+  Tarea.termine(nroGrupo, idAlumno);
+  Tarea.recibirNota(nota, idAlumno);
+}
+/*
+7. Se debe simular una maratón con C corredores donde en la llegada hay UNA máquina expendedoras de agua con capacidad para 20 botellas. Además, existe un repositor encargado de reponer las botellas de la máquina. Cuando los C corredores han llegado al inicio comienza la carrera. Cuando un corredor termina la carrera se dirigen a la máquina expendedora, espera su turno (respetando el orden de llegada), saca una botella y se retira. Si encuentra la máquina sin botellas, le avisa al repositor para que cargue nuevamente la máquina con 20 botellas; espera a que se haga la recarga; saca una botella y se retira. Nota: mientras se reponen las botellas se debe permitir que otros corredores se encolen.
+*/
