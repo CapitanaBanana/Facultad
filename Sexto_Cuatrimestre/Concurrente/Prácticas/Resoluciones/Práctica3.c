@@ -307,13 +307,171 @@ process vehiculo[0..N-1]{
 a) Resuelva considerando que el corralón tiene un único empleado.
 */
 Monitor corralon{
-  cola clientes;
-  
+  cond espera; empleado; entrega;
+  int cant=0
+  boolean ocupado=false
+
+  procedure llegar(){
+    while (ocupado){
+      cant++;
+      wait(espera)
+    }
+    ocupado=true;
+    signal(empleado)
+    wait(entrega)
+  }
+  procedure irse(){
+    if (cant<>0){
+      cant--
+      signal(espera)
+    }
+    ocupado=false;
+  }
+  atender(){
+    wait(empleado)
+  }
+  entregar(){
+    signal(entrega)
+  }
 
 }
 process Cliente[0..N-1]{
-
+  corralon.llegar()
+  //entregar lista de compra
+  corralon.irse()
 }
 process Empleado{
-
+  for (int i=0; i<n-1; i++){
+    corralon.atender()
+    //hacer comrpobante
+    corralon.entregar()
+  }
 }
+/*
+b) Resuelva considerando que el corralón tiene E empleados (E > 1). Los empleados no deben terminar su ejecución
+*/
+Monitor corralon{
+  cola empleadosLibres;
+  cond espera; 
+  int cantLibres=0, cantEsperando=0
+
+  procedure llegar(idE: out int){
+    while (cantLibres==0){
+      cantEsperando++;
+      wait(espera)
+    }
+    cantLibres--;
+    idE= pop(empleadosLibres)
+  }
+  
+  atender(idE: in int){
+    push(empleadosLibres, idE);
+    cantLibres++;
+    if (cantEsperando<>0){
+      cantEsperando--
+      signal(espera)
+    }
+    
+  }
+  
+}
+Monitor escritorio[0..E-1]{
+  string papel;
+  boolean hayPapel;
+  cond esperandoPapeles; estaElRecibo;
+  
+  procedure darPapeles(papel: string in){
+    papel=papel;
+    hayPapel=true;
+    signal(esperandoPapeles);
+    wait(estaElRecibo)
+  }
+  procedure recibirPapel(){
+    if(!hayPapel){
+      wait(esperandoPapeles);
+    }
+  }
+  procedure dejarRecibo(){
+    signal(estaElRecibo)
+  }
+}
+process Cliente[0..N-1]{
+  corralon.llegar(idE)
+  escritorio[idE].darPapeles(papel)
+}
+process Empleado[0..E-1]{
+  while true{
+    banco.atender(idEmp);
+    escritorio[idEmp].recibirPapel;
+    //generar recibo
+    escritorio[idEmp].dejarRecibo;
+  }
+}
+/*
+c) Modifique la solución (b) considerando que los empleados deben terminar su ejecución cuando se hayan atendido todos los clientes.
+*/
+Monitor corralon{
+  cola empleadosLibres;
+  cond espera; 
+  int cantLibres=0, cantEsperando=0 int cantRestante=N
+
+  procedure hayClientes(){
+    return cantRestante;
+  }
+  procedure llegar(idE: out int){
+    while (cantLibres==0){
+      cantEsperando++;
+      wait(espera)
+    }
+    cantLibres--;
+    idE= pop(empleadosLibres)
+  }
+  
+  atender(idE: in int){
+    push(empleadosLibres, idE);
+    cantLibres++;
+    cantRestante--;
+    if (cantEsperando<>0){
+      cantEsperando--
+      signal(espera)
+    }
+    
+  }
+  
+}
+Monitor escritorio[0..E-1]{
+  string papel;
+  boolean hayPapel;
+  cond esperandoPapeles; estaElRecibo;
+  
+  procedure darPapeles(papel: string in){
+    papel=papel;
+    hayPapel=true;
+    signal(esperandoPapeles);
+    wait(estaElRecibo)
+  }
+  procedure recibirPapel(){
+    if(!hayPapel){
+      wait(esperandoPapeles);
+    }
+  }
+  procedure dejarRecibo(){
+    signal(estaElRecibo)
+  }
+}
+process Cliente[0..N-1]{
+  corralon.llegar(idE)
+  escritorio[idE].darPapeles(papel)
+}
+process Empleado[0..E-1]{
+  while Corralon.HayClientes(){
+    banco.atender(idEmp);
+    escritorio[idEmp].recibirPapel;
+    //generar recibo
+    escritorio[idEmp].dejarRecibo;
+  }
+}
+
+/*
+6. Existe una comisión de 50 alumnos que deben realizar tareas de a pares, las cuales son corregidas por un JTP. Cuando los alumnos llegan, forman una fila. Una vez que están todos en fila, el JTP les asigna un número de grupo a cada uno. Para ello, suponga que existe una función AsignarNroGrupo() que retorna un número “aleatorio” del 1 al 25. Cuando un alumno ha recibido su número de grupo, comienza a realizar su tarea. Al terminarla, el alumno le avisa al JTP y espera por su nota. Cuando los dos alumnos del grupo completaron la tarea, el JTP les asigna un puntaje (el primer grupo en terminar tendrá como nota 25, el segundo 24, y así sucesivamente hasta el último que tendrá nota 1). Nota: el JTP no guarda el número de grupo que le asigna a cada alumno.
+*/
