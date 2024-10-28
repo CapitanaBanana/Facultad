@@ -1,0 +1,36 @@
+Mi envío
+Instrucciones para el envío 
+
+Elegí un sitio que NO haya sido analizado por otro/a compañero/a.  Para ello, primero revisá en https://padlet.com/claubanchoff/Actividad1  si el sitio que vas a utilizar ya fue elegido por otra persona. De no ser así, agregá un post con tu nombre y la url que vas a evaluar. 
+
+Elaborá un breve informe con la siguiente estructura:
+
+Estructura del Informe 
+
+URL del sitio a analizar: (recordá que no debe haber sido utilizado por otra persona)
+
+Análisis  HTML y CSS 
+
+URL del validador usado: 
+
+Resultados de la validación:
+
+Agregá una captura de pantalla del resultado de la validación, remarcando un error o advertencia  a analizar que detecte el validador. Describí con tus palabras el resultado del análisis dado por el validador del error marcado, y cómo podría resolverse (sin hacerlo).
+
+Respondé: ¿el documento HTML contiene tags semánticos y/o meta tags? ¿Cuáles? ¿Es legible su contenido accediendo al código fuente?
+
+Respondé ¿Incluye hojas de estilo? ¿De qué forma? (en un archivo externo, en el encabezado, en línea). 
+
+Análisis de accesibilidad 
+
+URL del validador usado:
+
+Resultados de la validación:
+
+Agregá una captura de pantalla con el resultado de la evaluación. Describí con tus palabras el resultado del análisis dado por el validador en general: cantidad de errores o warnings. Elegí un error o advertencia, describí cuál es el problema   y cómo podría resolverse (sin hacerlo).
+
+Explorá el sitio con un lector de pantalla y respondé:
+
+Herramienta usada: 
+
+Una breve reflexión sobre la experiencia: ¿pudiste acceder a la funcionalidad provista en el sitio? ¿La navegación es “intuitiva”? En caso de no ser así, mencionar algún ejemplo. 
