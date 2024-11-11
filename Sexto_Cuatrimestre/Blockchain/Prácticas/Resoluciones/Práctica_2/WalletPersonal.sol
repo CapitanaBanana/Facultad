@@ -24,6 +24,7 @@ contract WalletPersonal {
     function withdraw(uint256 _amount) public onlyOwner {
         require(_amount <= address(this).balance, "Fondos insuficientes en el contrato");
         payable(owner).transfer(_amount); //tenés que ser owner para ejecutar la función y le va a pasar al owner la plata??? creo que no entendí
+        //YA ENTENDÍ LE PASAS PLATA AL CONTRATO Y DESPUÉS RETIRAS DESDE EL CONTRATO
     }
     function balance() public view returns (uint256){
         return address(owner).balance;

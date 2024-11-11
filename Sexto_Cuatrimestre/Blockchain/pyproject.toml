@@ -15,6 +15,7 @@ eth-utils = "^5.0.0"
 eth-keys = "^0.5.1"
 eth-hash = {extras = ["pycryptodome"], version = "^0.7.0"}
 web3 = "^7.3.0"
+python-dotenv = "^1.0.1"
 
 
 [build-system]
