@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "práctica-4"
+version = "0.1.0"
+description = ""
+authors = ["Josefina Martinez <josemartinezosti@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+eth-brownie = "^1.20.6"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
