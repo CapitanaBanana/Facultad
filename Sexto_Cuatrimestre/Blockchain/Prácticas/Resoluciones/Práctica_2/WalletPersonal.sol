@@ -27,7 +27,7 @@ contract WalletPersonal {
         //YA ENTENDÍ LE PASAS PLATA AL CONTRATO Y DESPUÉS RETIRAS DESDE EL CONTRATO
     }
     function balance() public view returns (uint256){
-        return address(owner).balance;
+        return address(this).balance;
     }
 
 
