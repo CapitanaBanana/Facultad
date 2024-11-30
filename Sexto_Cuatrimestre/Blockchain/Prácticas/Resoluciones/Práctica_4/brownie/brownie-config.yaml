@@ -6,6 +6,10 @@ compiler:
     optimizer:
       enabled: true
       runs: 200
-account_a: ${PK}
-logging:
-  level: DEBUG
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.9.3'
+deployer_sepolia: ${PK_SEPOLIA}
+account_b: ${PK_B}
+account_c: ${PK_C}
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.9.3
