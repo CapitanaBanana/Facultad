@@ -1,0 +1,29 @@
+*.tarpaulin.html
+*.tarpaulin.json
+*.tarpaulin.txt
+coverage/
+# Compilación de Rust
+/target/
+
+# Archivos generados por Cargo
+**/*.rs.bk
+
+# Archivos de dependencias
+Cargo.lock
+
+# Archivos específicos de sistemas operativos
+.DS_Store
+Thumbs.db
+
+*.exe
+*.out
+*.app
+*.dSYM
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+*.o
+*.obj
+*.bin
