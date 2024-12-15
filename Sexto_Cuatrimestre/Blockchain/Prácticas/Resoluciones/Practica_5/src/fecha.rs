@@ -32,11 +32,20 @@ impl Fecha {
         true
     }
 
-    pub fn sumar_dias(&mut self, dias: u8) -> &mut Fecha {
-        self.dia += dias;
+    //qué decisión estúpuida fue no usar un crate para esto :p
+   pub fn sumar_dias(&mut self, dias: u8) -> &mut Fecha {
+    let mut dias_restantes = dias;
 
-        while self.dia > self.dias_en_mes(self.mes, self.anio) {
-            self.dia -= self.dias_en_mes(self.mes, self.anio);
+    while dias_restantes > 0 {
+        let dias_en_mes_actual = self.dias_en_mes(self.mes, self.anio);
+
+        if self.dia + dias_restantes as u8 <= dias_en_mes_actual {
+            self.dia += dias_restantes as u8;
+            dias_restantes = 0;
+        } else {
+            let dias_hasta_fin_mes = dias_en_mes_actual - self.dia; 
+            dias_restantes -= dias_hasta_fin_mes;
+            self.dia = 1; 
             self.mes += 1;
 
             if self.mes > 12 {
@@ -44,9 +53,11 @@ impl Fecha {
                 self.anio += 1;
             }
         }
-
-        self
     }
+
+    self
+}
+
 
     pub fn restar_dias(&mut self, dias: u8) -> &mut Fecha {
         let mut dias_restantes = dias;
