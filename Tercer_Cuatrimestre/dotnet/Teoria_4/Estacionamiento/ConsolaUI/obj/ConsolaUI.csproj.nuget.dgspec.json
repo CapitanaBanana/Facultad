@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj": {}
+    "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj": {
+    "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj",
+        "projectUniqueName": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj",
         "projectName": "Automotores",
-        "projectPath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj",
+        "projectPath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj",
         "packagesPath": "C:\\Users\\Capi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\obj\\",
+        "outputPath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Capi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -32,7 +32,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -48,23 +54,37 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj": {
+    "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
+        "projectUniqueName": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
         "projectName": "ConsolaUI",
-        "projectPath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
+        "projectPath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
         "packagesPath": "C:\\Users\\Capi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\obj\\",
+        "outputPath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Capi\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -79,8 +99,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj": {
-                "projectPath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj"
+              "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj": {
+                "projectPath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\Automotores\\Automotores.csproj"
               }
             }
           }
@@ -89,7 +109,13 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net7.0": {
@@ -105,12 +131,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

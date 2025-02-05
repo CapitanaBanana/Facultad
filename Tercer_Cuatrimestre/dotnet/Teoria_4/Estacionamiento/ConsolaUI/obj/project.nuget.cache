@@ -1,8 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "e8VYfC5N6kQAMWNN4619JMx9DFYebQu9VlEet8OCvtu4YIeQsz562l/4RuuWQMcXByNVLfhkyod21OoFQxawAg==",
+  "dgSpecHash": "y6ZTtPwPrp8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Capi\\Desktop\\Facultad\\Tercer-cuatri\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Capi\\Facultad\\Tercer_Cuatrimestre\\dotnet\\Teoria_4\\Estacionamiento\\ConsolaUI\\ConsolaUI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Capi\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.20\\microsoft.netcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Capi\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.20\\microsoft.windowsdesktop.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Capi\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.20\\microsoft.aspnetcore.app.ref.7.0.20.nupkg.sha512",
+    "C:\\Users\\Capi\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.20\\microsoft.netcore.app.host.win-x64.7.0.20.nupkg.sha512"
+  ],
   "logs": []
 }
