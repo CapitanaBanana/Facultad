@@ -1,0 +1,10 @@
+a,b,d (full bien creo)
+b(mal)
+b,c,d(en esta la d la aclaré, no sé como lo tomarán)
+a,b,c,e (no me acuerdo)
+5.a,b,d,e (me parece que marqué la c :s)
+6.a,b,c(creo que marqué b y c)
+a,b,d(creo que no marqué la a o la b por leer mal)
+8.a,d (no me acuerdo)
+a,b
+a,c,e
