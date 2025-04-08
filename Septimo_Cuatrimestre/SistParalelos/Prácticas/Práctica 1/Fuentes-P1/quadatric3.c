@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-
-#define TIMES 100
+#include <sys/time.h>
 #define N 10000000
 
 #define FA 1.0f
@@ -17,8 +16,15 @@
 /* Time in seconds from some point in the past */
 double dwalltime();
 
-int main(void)
+int main(int argc, char *argv[])
 {
+	if (argc != 2) {
+        	printf("Uso: %s <veces>\n", argv[0]);
+        	return 1;
+    	}
+
+    	int TIMES = atoi(argv[1]);
+
 	float * fa = (float*) malloc(N*sizeof(float));
 	float * fb = (float*) malloc(N*sizeof(float));
 	float * fc = (float*) malloc(N*sizeof(float));
@@ -87,7 +93,7 @@ int main(void)
 
 }  
 
-#include <sys/time.h>
+
 
 double dwalltime()
 {
