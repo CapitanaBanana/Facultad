@@ -48,7 +48,7 @@ int main(int argc, char* argv[])
       toc = MPI_Wtime();
       printf("Tiempo transcurrido %f (s):\tproceso %d, MPI_IRecv() devolvio el control..\n",
 	     (toc - tic), rank);
-      printf("\t\t\t\t\t..pero el mensaje no fue aun recibido..\n");
+       printf("\t\t\t\t\t..pero el mensaje no fue aun recibido..\n");
       MPI_Wait(&request, &status);  /* unsafe to proceed beyond here until request has been satisfied */ 
       toc = MPI_Wtime();
       printf("Tiempo transcurrido %f (s):\tproceso %d, operacion receive completa con mensaje: %s\n", 
