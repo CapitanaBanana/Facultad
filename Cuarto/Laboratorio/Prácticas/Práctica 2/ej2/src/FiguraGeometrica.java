@@ -1,17 +1,25 @@
-abstract class FiguraGeometrica {
+abstract class FiguraGeometrica implements Comparable<FiguraGeometrica> {
   private String color;
 
   public FiguraGeometrica(String color) {
     this.color = color;
   }
-  void dibujar(){
 
+  @Override
+  public int compareTo(FiguraGeometrica otra) {
+    return Integer.compare(this.area(), otra.area());// devuelve < 0 si this es menor que otra, > 0 si es mayor, y 0 si
+                                                     // son iguales
   }
+
+  abstract void dibujar();
+
   abstract int area();
-  void setColor(String color){
+
+  void setColor(String color) {
     this.color = color;
   }
-  String getColor(){
+
+  String getColor() {
     return color;
   }
 
