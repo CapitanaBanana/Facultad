@@ -1,7 +1,6 @@
-package robotito;
+package robotito3;
 
 import robocode.JuniorRobot;
-import java.util.Random;
 
 /**
  * Movimiento evasivo "medio aleatorio" usando turnAheadRight/Left.
