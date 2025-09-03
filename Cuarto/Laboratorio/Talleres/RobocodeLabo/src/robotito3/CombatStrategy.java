@@ -1,4 +1,4 @@
-package robotito;
+package robotito3;
 
 import robocode.*;
 
