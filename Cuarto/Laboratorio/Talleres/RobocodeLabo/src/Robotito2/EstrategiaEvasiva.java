@@ -1,16 +1,15 @@
-package Robotito;
+package Robotito2;
 
 import robocode.JuniorRobot;
 
 public class EstrategiaEvasiva implements CombatStrategy {
-    private int terminatorThreshold = 5;
-    private int leftWallAngle = 270;
+
     private boolean ready = false;
     private final int distance = 100;
 
     @Override
     public void init(JuniorRobot robot) {
-        ready = robot.others < this.terminatorThreshold;
+        ready = robot.others < CombatStrategy.terminatorThreshold;
 
         robot.setColors(JuniorRobot.yellow, JuniorRobot.purple, JuniorRobot.red,
                 JuniorRobot.purple, JuniorRobot.red);
@@ -23,7 +22,7 @@ public class EstrategiaEvasiva implements CombatStrategy {
     @Override
     public void onTick(JuniorRobot robot) {
         robot.fire(CombatStrategy.bulletHalfPower);
-        if (robot.others < this.terminatorThreshold) {
+        if (robot.others < CombatStrategy.terminatorThreshold) {
             ready = true;
         }
         robot.ahead(distance);
@@ -56,7 +55,6 @@ public class EstrategiaEvasiva implements CombatStrategy {
 
     }
 
-    @Override
     public boolean readyToAttack() {
         return ready;
     }

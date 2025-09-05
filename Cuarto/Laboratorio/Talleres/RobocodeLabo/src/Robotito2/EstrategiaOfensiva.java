@@ -1,4 +1,4 @@
-package Robotito;
+package Robotito2;
 
 import robocode.JuniorRobot;
 
@@ -38,7 +38,7 @@ public class EstrategiaOfensiva implements CombatStrategy {
     @Override
     public void onScannedRobot(JuniorRobot robot){
         robot.turnGunTo(robot.scannedAngle);
-        // Ajustar potencia en funciÃ³n de la distancia
+        // Ajustar potencia en función de la distancia
         double power = (robot.scannedDistance < 200) ? bulletMaxPower : bulletHalfPower;
         this.discreteFire(robot,power);
 
