@@ -16,7 +16,7 @@
 @rem Link: https://docs.oracle.com/javase/10/troubleshoot/java-2d-pipeline-rendering-and-properties.htm#JSTGD438
 
 @rem Enable or disable Direct3D acceleration (true/false)
-set J2D_D3D=true
+set J2D_D3D=false
 
 @rem Get detailed information about the startup procedures of the Java 2D pipeline when using
 @rem OpenGL or Direct3D acceleration. Remove the @rem from next line to enable the tracing:

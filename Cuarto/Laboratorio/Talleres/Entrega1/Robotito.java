@@ -1,4 +1,4 @@
-package Robotito2;
+package Robotito;
 
 import robocode.JuniorRobot;
 
@@ -13,13 +13,11 @@ public class Robotito extends JuniorRobot {
 
         while (true) {
 
-            // Cambio a ofensiva cuando la evasiva lo pida
-            if (strategy instanceof EstrategiaEvasiva) {
-                if (((EstrategiaEvasiva) strategy).readyToAttack()) {
-                    this.setStrategy(new EstrategiaOfensiva());
-                    strategy.init(this);
-                }
+            if (this.strategy.readyToAttack()) {
+                this.setStrategy(new EstrategiaOfensiva());
+                strategy.init(this);
             }
+
             strategy.onTick(this);
         }
     }
