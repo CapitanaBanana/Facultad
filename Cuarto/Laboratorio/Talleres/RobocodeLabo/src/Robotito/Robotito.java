@@ -4,7 +4,7 @@ import robocode.JuniorRobot;
 
 public class Robotito extends JuniorRobot {
 
-    private Estratega strategist = new TwoPhaseCombatStrategy();
+    private Estratega strategist = TwoPhaseCombatStrategy.getInstance();
 
     private CombatStrategy strategy;
 
