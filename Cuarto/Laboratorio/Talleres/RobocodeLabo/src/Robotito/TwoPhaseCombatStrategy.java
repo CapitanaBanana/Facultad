@@ -4,13 +4,18 @@ import robocode.JuniorRobot;
 
 public class TwoPhaseCombatStrategy implements Estratega{
     private static final int terminatorThreshold = 5;
+    private static final TwoPhaseCombatStrategy INSTANCE = new TwoPhaseCombatStrategy();
+    private TwoPhaseCombatStrategy() {}
+
+    public static TwoPhaseCombatStrategy getInstance() {
+        return INSTANCE;
+    }
 
     private static class EstrategiaEvasiva extends CombatStrategy {
         private final int distance = 100;
 
         @Override
         public void onInit() {
-
             robot.setColors(JuniorRobot.yellow, JuniorRobot.purple, JuniorRobot.red,
                     JuniorRobot.purple, JuniorRobot.red);
 
@@ -59,8 +64,6 @@ public class TwoPhaseCombatStrategy implements Estratega{
 
     }
 
-
-
     private static class EstrategiaOfensiva extends CombatStrategy {
 
         private int steps;
@@ -93,7 +96,6 @@ public class TwoPhaseCombatStrategy implements Estratega{
         @Override
         public void onScannedRobot(){
             robot.turnGunTo(robot.scannedAngle);
-            // Ajustar potencia en funciÃ³n de la distancia
             double power = (robot.scannedDistance < 200) ? bulletMaxPower : bulletHalfPower;
             this.discreteFire(power);
 
@@ -123,15 +125,12 @@ public class TwoPhaseCombatStrategy implements Estratega{
 
     }
 
-    public static final CombatStrategy evasivePhase = new EstrategiaEvasiva();
-    public static final CombatStrategy aggressivePhase = new EstrategiaOfensiva();
-
     @Override
     public CombatStrategy elegirEstrategia(JuniorRobot robot) {
         if (robot.others > terminatorThreshold) {
-            return TwoPhaseCombatStrategy.evasivePhase;
+            return new EstrategiaEvasiva();
         } else {
-            return TwoPhaseCombatStrategy.aggressivePhase;
+            return new EstrategiaOfensiva();
         }
     }
 }
