@@ -4,22 +4,20 @@ import robocode.JuniorRobot;
 
 public class TwoPhaseCombatStrategy implements Estratega{
     private static final int terminatorThreshold = 5;
-    private static final TwoPhaseCombatStrategy INSTANCE = new TwoPhaseCombatStrategy();
+    public static final TwoPhaseCombatStrategy INSTANCE = new TwoPhaseCombatStrategy();
     private TwoPhaseCombatStrategy() {}
+    private boolean nuevo=true;
 
-    public static TwoPhaseCombatStrategy getInstance() {
-        return INSTANCE;
-    }
 
     private static class EstrategiaEvasiva extends CombatStrategy {
         private final int distance = 100;
+        public static final EstrategiaEvasiva INSTANCE = new EstrategiaEvasiva();
 
         @Override
         public void onInit() {
             robot.setColors(JuniorRobot.yellow, JuniorRobot.purple, JuniorRobot.red,
-                    JuniorRobot.purple, JuniorRobot.red);
-
-            moveToLeftWall(robot);
+                    JuniorRobot.yellow, JuniorRobot.red);
+                moveToLeftWall(robot);
         }
 
         private void moveToLeftWall(JuniorRobot robot){
@@ -27,6 +25,7 @@ public class TwoPhaseCombatStrategy implements Estratega{
             robot.turnTo(leftWallAngle);
             robot.turnGunTo(0);
             robot.ahead(robot.fieldWidth);
+
         }
 
         @Override
@@ -48,11 +47,11 @@ public class TwoPhaseCombatStrategy implements Estratega{
         @Override
         public void onScannedRobot() {
 
+
         }
 
         @Override
         public void onHitRobot() {
-
             robot.turnGunTo(robot.hitRobotAngle);
             robot.fire(bulletMaxPower);
         }
@@ -65,13 +64,14 @@ public class TwoPhaseCombatStrategy implements Estratega{
     }
 
     private static class EstrategiaOfensiva extends CombatStrategy {
-
+        public static final EstrategiaOfensiva INSTANCE = new EstrategiaOfensiva();
         private int steps;
 
         @Override
         public void onInit() {
             robot.setColors(JuniorRobot.red, JuniorRobot.black, JuniorRobot.black,
                     JuniorRobot.red, JuniorRobot.red);
+
         }
 
         private void discreteFire(double power){
@@ -127,10 +127,18 @@ public class TwoPhaseCombatStrategy implements Estratega{
 
     @Override
     public CombatStrategy elegirEstrategia(JuniorRobot robot) {
+        CombatStrategy estrategia;
         if (robot.others > terminatorThreshold) {
-            return new EstrategiaEvasiva();
+            estrategia= EstrategiaEvasiva.INSTANCE;
+            if(nuevo){
+                estrategia.init(robot);
+                nuevo=false;
+            }
         } else {
-            return new EstrategiaOfensiva();
+            estrategia= EstrategiaOfensiva.INSTANCE;
+            estrategia.init(robot);
+
         }
+        return estrategia;
     }
 }

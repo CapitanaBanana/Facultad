@@ -35,5 +35,4 @@ public class Robotito extends JuniorRobot {
         strategist.strategyForOnHitByBullet().onHitByBullet();
     }
 
-
 }

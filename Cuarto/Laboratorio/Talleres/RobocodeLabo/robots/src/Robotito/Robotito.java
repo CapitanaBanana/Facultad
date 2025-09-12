@@ -4,34 +4,33 @@ import robocode.JuniorRobot;
 
 public class Robotito extends JuniorRobot {
 
-    private Estratega strategist = TwoPhaseCombatStrategy.getInstance();
+    private Estratega strategist = TwoPhaseCombatStrategy.INSTANCE;
 
     private CombatStrategy strategy;
 
     @Override
     public void run() {
-        while (true) {
-            CombatStrategy nextStrategy = strategist.elegirEstrategia(this);
-
-            if (nextStrategy != strategy) {
-                strategy = nextStrategy;
-                strategy.init(this);
-            }
-            strategy.onTick();
+        setStrategy(strategist.elegirEstrategia(this));
+        while(true){
+            onTick();
         }
     }
 
     public void setStrategy(CombatStrategy newStrat) {
         strategy = newStrat;
     }
-
-    public void onHitWall(){ strategy.onHitWall(); }
-
-    public void onHitRobot() { strategy.onHitRobot(); }
-
-    public void onHitByBullet() {
-        strategy.onHitByBullet();
+    private void onTick(){
+        strategist.elegirEstrategia(this).onTick();
     }
 
-    public void onScannedRobot(){ strategy.onScannedRobot(); }
+    public void onHitWall(){
+      strategist.elegirEstrategia(this).onHitWall(); }
+
+    public void onHitRobot() { strategist.elegirEstrategia(this).onHitRobot(); }
+
+    public void onHitByBullet() {
+      strategist.elegirEstrategia(this).onHitByBullet();
+    }
+
+    public void onScannedRobot(){ strategist.elegirEstrategia(this).onScannedRobot(); }
 }

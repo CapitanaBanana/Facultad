@@ -2,61 +2,77 @@ package Robotito2;
 
 import robocode.JuniorRobot;
 
-public class TwoPhaseCombatStrategy extends Estratega{
+public class TwoPhaseCombatStrategy extends Estratega {
     private static final int terminatorThreshold = 5;
     private static final TwoPhaseCombatStrategy INSTANCE = new TwoPhaseCombatStrategy();
-    private final CombatStrategy estrategiaEvasiva= new EstrategiaEvasiva();
-    private final CombatStrategy estrategiaOfensiva= new EstrategiaOfensiva();
-
+    private final CombatStrategy estrategiaEvasiva = new EstrategiaEvasiva();
+    private final CombatStrategy estrategiaOfensiva = new EstrategiaOfensiva();
+    private boolean init = false;
     private TwoPhaseCombatStrategy() {}
 
     public static TwoPhaseCombatStrategy getInstance() {
         return INSTANCE;
     }
 
+    public void init(JuniorRobot robot) {
+        this.robot = robot;
+        estrategiaEvasiva.init(robot);
 
-    protected CombatStrategy strategyForOnInit() {
-        if (robot.others > terminatorThreshold)
-            return estrategiaEvasiva;
-        else
-            return estrategiaOfensiva;
+    }
+    private void isInitializatedOffensive(){
+        if(!init){
+            estrategiaOfensiva.init(robot);
+            init=true;
+        }
     }
 
     public CombatStrategy strategyForOnScannedRobot(){
         if (robot.others > terminatorThreshold)
             return estrategiaEvasiva;
-        else
+        else{
+            isInitializatedOffensive();
             return estrategiaOfensiva;
+        }
+
     }
     public CombatStrategy strategyForOnHitWall(){
         if (robot.others > terminatorThreshold)
             return estrategiaEvasiva;
-        else
+        else{
+            isInitializatedOffensive();
             return estrategiaOfensiva;
+        }
     }
 
     public CombatStrategy strategyForOnHitRobot(){
         if (robot.others > terminatorThreshold)
             return estrategiaEvasiva;
-        else
+        else{
+            isInitializatedOffensive();
             return estrategiaOfensiva;
+        }
     }
 
     public CombatStrategy strategyForOnHitByBullet(){
         if (robot.others > terminatorThreshold)
             return estrategiaEvasiva;
-        else
+        else{
+            isInitializatedOffensive();
             return estrategiaOfensiva;
+        }
     }
 
     public CombatStrategy strategyForOnTick(){
         if (robot.others > terminatorThreshold)
             return estrategiaEvasiva;
-        else
+        else{
+            isInitializatedOffensive();
             return estrategiaOfensiva;
+        }
     }
     private static class EstrategiaEvasiva extends CombatStrategy {
         private final int distance = 100;
+
 
         @Override
         public void onInit() {

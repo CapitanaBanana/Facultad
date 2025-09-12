@@ -7,10 +7,7 @@ public abstract class Estratega {
 
     public void init(JuniorRobot robot) {
         this.robot = robot;
-        strategyForOnInit();
     }
-
-    protected abstract CombatStrategy strategyForOnInit();
 
     protected abstract CombatStrategy strategyForOnTick();
 
