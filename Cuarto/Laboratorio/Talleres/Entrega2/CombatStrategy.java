@@ -12,7 +12,6 @@ public abstract class CombatStrategy {
         onInit();
     }
 
-
     abstract void onInit();
 
     abstract void onTick();
