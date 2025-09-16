@@ -1,18 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
-  int cant;
-  int x=0;
-  string op;
-  cin >> cant;
-  for(int i=0;i<cant;i++){
-    cin >> op;
-    if (op.find("--") != string::npos){
-      x--;
-    }
-    else{
-      x++;
-    }
+  long n;
+  long m;
+  long a;
+  cin >> n>>m>>a;
+  double res = (n * m) / (a * a);
+  cout << ceil(res);
 }
 
- cout<<x<<'\n';}
