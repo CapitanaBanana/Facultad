@@ -1,0 +1,4 @@
+public enum Genero {
+  FICCION, COMEDIA, DRAMA, FANTASIA, MUSICAL, ROMANCE, SUSPENSO;
+
+}

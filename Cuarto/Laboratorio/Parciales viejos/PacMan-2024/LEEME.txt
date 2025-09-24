@@ -1,0 +1,2 @@
+El proyecto que tomé como base lo busqué de google, no encontré en ningún lado el que les dieron en el parcial. Tiene pinta de que hay algo raro por todo lo del enum de las cositas dentro de board, pero ni idea.
+Igual para practicar sirve :)
