@@ -8,18 +8,13 @@ int main()
   cin >> n;
   vector<long long> result(n, 0);
   result[0] = 1;
-  for (int i = 1; i < n; i++)
+  for (int i = 1; i <= n; i++)
   {
-    int res = 0;
-    for (int j = i - 1; j >= 0; j--)
-    {
-      res += result[j] % MOD;
-    }
+    long long res = 0;
+    for (int j = 1; j <= 6 && i - j >= 0; j++)
+      res = (res + result[i - j]) % MOD;
     result[i] = res;
-    if (i < 6)
-    {
-      result[i]++;
-    }
   }
-  cout << result[n - 1] << '\n';
+
+  cout << result[n] << '\n';
 }
