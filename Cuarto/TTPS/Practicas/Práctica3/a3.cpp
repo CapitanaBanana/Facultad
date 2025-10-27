@@ -1,11 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 struct DSU
 {
   vector<int> parent, size;
-  int componentes, maxSize;
-  DSU(int n) : parent(n), size(n, 1), componentes(n), maxSize(1)
+  int componentes;
+  DSU(int n) : parent(n), size(n, 1), componentes(n)
   {
     for (int i = 0; i < n; i++)
       parent[i] = i;
@@ -16,18 +15,18 @@ struct DSU
       return x;
     return parent[x] = find(parent[x]);
   }
-  void unite(int x, int y)
+  int unite(int x, int y)
   {
     x = find(x);
     y = find(y);
     if (x == y)
-      return;
+      return 1;
     if (size[x] < size[y])
       swap(x, y);
     parent[y] = x;
     size[x] += size[y];
     componentes--;
-    maxSize = max(maxSize, size[x]);
+    return 0;
   }
 };
 
@@ -43,6 +42,16 @@ int main()
     u--;
     v--;
     dsu.unite(u, v);
-    cout << dsu.componentes << " " << dsu.maxSize << "\n";
+  }
+  cout << dsu.componentes - 1 << "\n";
+  int root = dsu.find(0);
+  for (int i = 1; i < n; i++)
+  {
+    int ri = dsu.find(i);
+    if (ri != root)
+    {
+      dsu.unite(root, ri);
+      cout << root + 1 << " " << i + 1 << "\n";
+    }
   }
 }
