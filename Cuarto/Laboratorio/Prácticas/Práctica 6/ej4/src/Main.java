@@ -13,29 +13,28 @@ class Mano extends Falta{}
 
 class Partido {
     Partido() throws FutbolException{}
-    void evento() throws FutbolException{}
+    void evento() throws FutbolException, ClimaException{}
     void jugada() throws EquipoIncompleto,
             Falta{}
-    void penal(){}
+    void penal() throws FutbolException{}
 }
 
-inteface Tormenta {
-void evento() throws Lluvia;
-void diluvio() throws Lluvia;
+interface Tormenta {
+    void evento() throws Lluvia;
+    void diluvio() throws Lluvia;
 }
 public class Encuentro extends Partido
         implements Tormenta {
 
     Encuentro() throws Lluvia,
-            FutbolException{..}
+            FutbolException{}
     Encuentro (String fecha) throws Falta,
-            FutbolException{..}
+            FutbolException{}
 
-    void penal() throws Mano{..}
-    public void evento() throws Lluvia{..}
-    public void diluvio() throws Lluvia{..}
-    public void evento(){..}
-    void jugada() throws Mano{..}
+    void penal() throws Mano{}
+    public void evento() throws Lluvia{}
+    public void diluvio() throws Lluvia{}
+    void jugada() throws Mano{}
 
     public static void main (String[] args) {
         try {
