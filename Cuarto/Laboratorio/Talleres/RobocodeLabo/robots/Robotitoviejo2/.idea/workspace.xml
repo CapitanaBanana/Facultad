@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="41889fa7-4146-4554-973a-4ec1ab345ee0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CombatStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Estratega.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robotito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Robotito.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TwoPhaseCombatStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin/EstrategiaEvasiva.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin/EstrategiaOfensiva.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin/Robotito.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin2/CombatStrategy.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin2/Estratega.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin2/Robotito.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../robotitoKotlin2/TwoPhaseCombatStrategy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Contenedor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Contenedor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Invocar.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Invocar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Servidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/Servidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/UnServidor.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../Prácticas/Práctica 5/Ej3/src/UnServidor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/kotlinc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/libraries/KotlinJavaRuntime.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/libraries/libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/RobocodeLabo-kotlin.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/RobocodeLabo.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/config/robocode.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/config/window.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/java2d.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/libraries/libs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/libs.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/annotations-13.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/bcel-6.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/codesize-1.3.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/commons-lang3-3.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/jna-5.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/jna-platform-5.14.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/kotlin-stdlib-2.0.20.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/org.osgi.service.prefs-1.1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/osgi.annotation-8.0.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/picocontainer-2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.battle-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.core-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.host-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.repository-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.sound-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.ui-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/robocode.ui.editor-1.10.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/libs/roborumble.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robocode.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robocode.command" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robocode.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Hernandez-Martinez.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito/CombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito/Estratega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito/Robotito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito/TwoPhaseCombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito2/CombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito2/Estratega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito2/Robotito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito2/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito2/TwoPhaseCombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito3/CombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito3/Estratega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito3/Robotito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito3/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/Robotito3/TwoPhaseCombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/robot.database" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Corners.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Corners.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Corners.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Crazy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Crazy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Crazy.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Fire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Fire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Fire.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive_v2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive_v2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Interactive_v2.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstJuniorRobot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstJuniorRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstJuniorRobot.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstRobot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/MyFirstRobot.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/PaintingRobot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/PaintingRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/PaintingRobot.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/RamFire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/RamFire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/RamFire.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SittingDuck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SittingDuck.data/count.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SittingDuck.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SittingDuck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SittingDuck.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SpinBot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SpinBot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/SpinBot.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Target.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Target.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Target.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/TrackFire.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/TrackFire.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/TrackFire.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Tracker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Tracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Tracker.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/VelociRobot.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/VelociRobot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/VelociRobot.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Walls.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Walls.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sample/Walls.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/Alien.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/Alien.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/Alien.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/AlienComposition.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/AlienComposition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/GreyEminence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/MasterAndSlave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/MasterAndSlave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/MasterAndSlave.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/MasterBase.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/ProxyOfGreyEminence.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/ProxyOfGreyEminence.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/ProxyOfGreyEminence.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/RegullarMonk.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/RegullarMonk.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/Slave.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/sampleex/Slave.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/samplesentry/BorderGuard.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/samplesentry/BorderGuard.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/samplesentry/BorderGuard.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/src/Robotito/CombatStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/src/Robotito/Estratega.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/src/Robotito/Robotito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/src/Robotito/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/robots/src/Robotito/TwoPhaseCombatStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/set_java_options.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/set_java_options.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/CombatStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/EstrategiaEvasiva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/EstrategiaOfensiva.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/Robotito.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/src/Robotito/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/templates/newjavafile.tpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/templates/newjuniorrobot.tpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/templates/newrobot.tpt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../RobocodeLabo-kotlin/versions.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RobotitoKotlin/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RobotitoKotlin/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RobotitoKotlin/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../RobotitoKotlin/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robotitokotlin2/CombatStrategy.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../robotitoKotlin/CombatStrategy.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robotitokotlin2/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robotitokotlin2/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../robotitokotlin2/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../../TTPS/Practicas/Práctica3/a2.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../../TTPS/Practicas/Práctica3/a2.cpp" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 6
+}]]></component>
+  <component name="ProjectId" id="34A4PJa05FPIrquZXHq2ByxyyCF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Capi/Facultad/Cuarto/Laboratorio/Talleres/RobocodeLabo/src/Robotitoviejo2"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="41889fa7-4146-4554-973a-4ec1ab345ee0" name="Changes" comment="" />
+      <created>1760643016598</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1760643016598</updated>
+    </task>
+    <servers />
+  </component>
+</project>

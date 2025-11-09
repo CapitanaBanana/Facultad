@@ -1,25 +1,17 @@
 package robotitoKotlin
 
-import robocode.JuniorRobot
+abstract class CombatStrategy  {
+  protected val bulletHalfPower: Double = 1.5
+  protected val bulletMaxPower: Double = 3.0
 
-abstract class CombatStrategy(protected val robot: JuniorRobot)  {
-    val bulletHalfPower = 1.5
-    val bulletMaxPower = 3.0
+  abstract fun onTick()
 
-    abstract fun onTick()
+  abstract fun onScannedRobot()
 
-    abstract fun onScannedRobot()
+  abstract fun onHitWall()
 
-    abstract fun onHitWall()
+  abstract fun onHitByBullet()
 
-    abstract fun onHitByBullet()
+  abstract fun onHitRobot()
 
-    fun onHitRobot(){
-        robot.turnGunTo(robot.hitRobotAngle)
-        robot.fire(this.bulletMaxPower)
-    }
-
-    open fun readyToAttack() : Boolean{
-        return false
-    }
 }

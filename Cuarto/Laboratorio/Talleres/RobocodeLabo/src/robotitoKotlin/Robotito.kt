@@ -3,39 +3,28 @@ package robotitoKotlin
 import robocode.JuniorRobot
 
 class Robotito: JuniorRobot() {
+  private var strategist = TwoPhaseCombatStrategy.INSTANCE
 
-    lateinit var strategy: CombatStrategy
-
-    override fun run(){
-        strategy = EstrategiaEvasiva(this)
-        var checked = false
-
-        while(true){
-            strategy.onTick()
-
-            if(this.strategy.readyToAttack() && !checked){
-                this.strategy = EstrategiaOfensiva(this)
-                checked = true
-            }
-
-        }
-
+  init{
+    TwoPhaseCombatStrategy.robot = this
+  }
+  override fun run() {
+    while (true){
+        onTick()
     }
+  }
 
-    override fun onScannedRobot(){
-        strategy.onScannedRobot()
-    }
+  private fun onTick() =  strategist.elegirEstrategia().onTick()
 
-    override fun onHitWall(){
-        strategy.onHitWall()
-    }
+  override fun onHitWall() = strategist.elegirEstrategia().onHitWall()
 
-    override fun onHitRobot() {
-        strategy.onHitRobot()
-    }
+  override fun onHitRobot() = strategist.elegirEstrategia().onHitRobot()
 
-    override fun onHitByBullet() {
-        strategy.onHitByBullet()
-    }
+  override fun onHitByBullet() = strategist.elegirEstrategia().onHitByBullet()
+
+  override fun onScannedRobot() = strategist.elegirEstrategia().onScannedRobot()
+
+
+
 
 }
