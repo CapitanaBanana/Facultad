@@ -1,0 +1,156 @@
+PS C:\Users\Capi\Downloads\webapp\webapp>  docker run --rm -v "${pwd}:/src" aquasec/trivy config /src/Dockerfile
+2025-11-15T20:16:57Z    INFO    [misconfig] Misconfiguration scanning is enabled
+2025-11-15T20:16:57Z    INFO    [misconfig] Need to update the checks bundle
+2025-11-15T20:16:57Z    INFO    [misconfig] Downloading the checks bundle...
+165.46 KiB / 165.46 KiB [------------------------------------------------------] 100.00% ? p/s 200ms2025-11-15T20:17:02Z        INFO    Detected config files   num=1
+
+Report Summary
+
+┌────────────┬────────────┬───────────────────┐
+│   Target   │    Type    │ Misconfigurations │
+├────────────┼────────────┼───────────────────┤
+│ Dockerfile │ dockerfile │        11         │
+└────────────┴────────────┴───────────────────┘
+Legend:
+- '-': Not scanned
+- '0': Clean (no security findings detected)
+
+
+Dockerfile (dockerfile)
+=======================
+Tests: 33 (SUCCESSES: 22, FAILURES: 11)
+Failures: 11 (UNKNOWN: 0, LOW: 1, MEDIUM: 1, HIGH: 2, CRITICAL: 7)
+
+AVD-DS-0002 (HIGH): Last USER command in Dockerfile should not be 'root'
+════════════════════════════════════════
+Running containers with 'root' user can lead to a container escape situation. It is a best practice to run containers as non-root users, which can be done by adding a 'USER' statement to the Dockerfile.
+
+See https://avd.aquasec.com/misconfig/ds002
+────────────────────────────────────────
+ Dockerfile:3
+────────────────────────────────────────
+   3 [ USER root
+────────────────────────────────────────
+
+
+AVD-DS-0004 (MEDIUM): Port 22 should not be exposed in Dockerfile
+════════════════════════════════════════
+Exposing port 22 might allow users to SSH into the container.
+
+See https://avd.aquasec.com/misconfig/ds004
+────────────────────────────────────────
+ Dockerfile:46
+────────────────────────────────────────
+  46 [ EXPOSE 22 3306 5432 6379
+────────────────────────────────────────
+
+
+AVD-DS-0026 (LOW): Add HEALTHCHECK instruction in your Dockerfile
+════════════════════════════════════════
+You should add HEALTHCHECK instruction in your docker container images to perform the health check on running containers.
+
+See https://avd.aquasec.com/misconfig/ds026
+────────────────────────────────────────
+
+
+AVD-DS-0029 (HIGH): '--no-install-recommends' flag is missed: 'apt-get update && apt-get install -y     curl     wget     openssl     sqlite3     sudo     && rm -rf /var/lib/apt/lists/*'
+════════════════════════════════════════
+'apt-get' install should use '--no-install-recommends' to minimize image size.
+
+See https://avd.aquasec.com/misconfig/ds029
+────────────────────────────────────────
+ Dockerfile:17-23
+────────────────────────────────────────
+  17 ┌ RUN apt-get update && apt-get install -y \
+  18 │     curl \
+  19 │     wget \
+  20 │     openssl \
+  21 │     sqlite3 \
+  22 │     sudo \
+  23 └     && rm -rf /var/lib/apt/lists/*
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "ADMIN_PASSWORD" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:8
+────────────────────────────────────────
+   8 [ ENV ADMIN_PASSWORD="admin123"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "API_TOKEN" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:7
+────────────────────────────────────────
+   7 [ ENV API_TOKEN="sk-1234567890abcdef"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "AWS_SECRET_KEY" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:11
+────────────────────────────────────────
+  11 [ ENV AWS_SECRET_KEY="AKIAJ38KSL4DJEKJ34EKLJDFJ3498844X"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "DATABASE_PASSWORD" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:6
+────────────────────────────────────────
+   6 [ ENV DATABASE_PASSWORD="password123"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "ENCRYPTION_KEY" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:10
+────────────────────────────────────────
+  10 [ ENV ENCRYPTION_KEY="encryption_key_12345"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "JWT_SECRET" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:9
+────────────────────────────────────────
+   9 [ ENV JWT_SECRET="jwt_secret_key"
+────────────────────────────────────────
+
+
+AVD-DS-0031 (CRITICAL): Possible exposure of secret env "SECRET_KEY" in ENV
+════════════════════════════════════════
+Passing secrets via `build-args` or envs or copying secret files can leak them out
+
+See https://avd.aquasec.com/misconfig/ds031
+────────────────────────────────────────
+ Dockerfile:5
+────────────────────────────────────────
+   5 [ ENV SECRET_KEY="super_secret_key_123456"
+────────────────────────────────────────
+
