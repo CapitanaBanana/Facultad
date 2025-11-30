@@ -2,3 +2,6 @@
 .vscode/
 .env
 Tercer_Cuatrimestre/dotnet/Teoria_4/Estacionamiento/Automotores/obj/
+# Logs de seguridad
+logTruffleHogSecrets.txt
+logTrivySecrets.txt
