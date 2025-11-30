@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="99695f96-e131-4444-9b3b-bee1a203c4f3" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/Java/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/Circuito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/ConfiguradorSimulacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/MotorDescompuesto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Java/Simulacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/LanzadorSimulator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Parcial2/src/java/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Parcial2/src/java/Circuito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Parcial2/src/java/ConfiguradorSimulacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Parcial2/src/java/Corredor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Parcial2/src/java/Procesador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/robocode.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/robocode.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/window.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/window.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/CombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Estratega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Robotito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy$EstrategiaEvasiva.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy$EstrategiaOfensiva.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/robot.database" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/robot.database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/Estratega.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/TwoPhaseCombatStrategy.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Exception" />
+        <option value="Kotlin File" />
+        <option value="Kotlin Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.14-bin/38aieal9i53h9rfe7vjup95b9/gradle-8.14" javaHome="$USER_HOME$/.jdks/openjdk-24.0.2+12-54" gradleVersion="8.14" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="354cHEQoKNHBSu6FyyJ51HLjX0Q" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Gradle.Evaluacion2 [:LanzadorSimulatorKt.main()].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/josef/Facultad/Cuarto/Laboratorio/Evaluacion2/src/main/Java",
+    "onboarding.tips.debug.path": "C:/Users/josef/Facultad/Cuarto/Laboratorio/Evaluacion2/src/main/kotlin/Main.kt",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\josef\Facultad\Cuarto\Laboratorio\Evaluacion2\src\main\Java" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="LanzadorSimulatorKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LanzadorSimulatorKt" />
+      <module name="Evaluacion2.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.LanzadorSimulatorKt" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="99695f96-e131-4444-9b3b-bee1a203c4f3" name="Changes" comment="" />
+      <created>1762372696604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762372696604</updated>
+    </task>
+    <servers />
+  </component>
+</project>

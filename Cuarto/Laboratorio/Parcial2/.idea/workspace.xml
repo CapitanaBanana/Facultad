@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="507971bc-8625-4078-8b63-15648d90ad36" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Evaluacion2/src/main/Java/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evaluacion2/src/main/Java/Circuito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evaluacion2/src/main/Java/ConfiguradorSimulacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evaluacion2/src/main/Java/Corredor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Evaluacion2/src/main/Java/Procesador.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/Auto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/Circuito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/ConfiguradorSimulacion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/Corredor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/java/Procesador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/robocode.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/robocode.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/window.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/config/window.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/CombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Estratega.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Robotito.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/Robotito.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy$EstrategiaEvasiva.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy$EstrategiaOfensiva.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/Robotito/TwoPhaseCombatStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/RobotitoKotlin/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/robot.database" beforeDir="false" afterPath="$PROJECT_DIR$/../Talleres/RobocodeLabo/robots/robot.database" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/EstrategiaEvasiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/EstrategiaOfensiva.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/CombatStrategy.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/Estratega.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/Robotito.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Talleres/RobocodeLabo/src/robotitoKotlin2/TwoPhaseCombatStrategy.kt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 3
+}]]></component>
+  <component name="ProjectId" id="354ZA3RFAQdJ7Vkbz9LuoiygThj" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "onboarding.tips.debug.path": "C:/Users/josef/Facultad/Cuarto/Laboratorio/Parcial2/src/Main.kt"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="507971bc-8625-4078-8b63-15648d90ad36" name="Changes" comment="" />
+      <created>1762371179977</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1762371179977</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/Main.kt</url>
+          <line>11</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
