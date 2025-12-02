@@ -16,14 +16,15 @@ int main()
 
   for (int c : coins)
   {
-
     for (int i = c; i <= n; i++)
     {
-
       result[i] += result[i - c];
       if (result[i] >= MOD)
         result[i] -= MOD;
     }
+    /*Porque el orden de los loops controla si estás permitiendo permutar o no.primero contás formas usando solo moneda 2
+    luego formas usando monedas{2, 3}
+    luego formas usando{2, 3, 5} */
   }
   cout << result[n];
 }
