@@ -54,9 +54,10 @@ int main()
       cin >> puntos[j].x >> puntos[j].y;
     }
 
-    Punto v1 = puntos[1] - puntos[0];
-    Punto v2 = puntos[2] - puntos[0];
-    double res = v1 ^ v2;
+    Punto v1 = puntos[1] - puntos[0]; // vector que apunta desde el punto 0 hacia el 1
+    Punto v2 = puntos[2] - puntos[0]; // idem arriba con 2
+    // ahora que ambos tienen el mismo origen, el producto cruzado de abajo me deja la rta
+    double res = v1 ^ v2; // producto cruzado entre el vector 1 y el 2
 
     if (res > eps)
     {

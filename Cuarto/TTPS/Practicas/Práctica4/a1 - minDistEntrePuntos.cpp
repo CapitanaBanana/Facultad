@@ -1,3 +1,4 @@
+// Buscar min distancia entre puntos
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -38,7 +39,7 @@ struct Punto
     return x * other.y - y * other.x;
   }
 
-  double mod() const
+  double mod() const // distancia entre puntos. tengo que haccer la resta entre los p que me interesen y después apalicarle la operación
   {
     return sqrtl((double)x * x + (double)y * y);
   }
@@ -49,39 +50,23 @@ int main()
   FIN;
   int n;
   cin >> n;
-  int horario = -1;
+  tipo min = 1e9;
   vector<Punto> puntos(n);
-
-  for (int i = 0; i < n; ++i)
+  for (int i = 0; i < n; i++)
   {
     cin >> puntos[i].x >> puntos[i].y;
-  }
-  for (int i = 1; i < n - 1; ++i)
-  {
-    Punto v1 = puntos[i] - puntos[i - 1];
-    Punto v2 = puntos[i + 1] - puntos[i];
-    tipo res = v1 ^ v2;
 
-    if (res < 0)
+    for (int j = 0; j < i; j++)
     {
-      if (horario != -1 && horario != 1)
+      Punto a = puntos[i] - puntos[j]; // itera por todos los puntos comparándolos con todo el resto
+      double dist = (double)a.mod();   // calcula la distancia
+      if (dist < min)
       {
-        cout << "NO";
-        return 0;
+        min = dist;
       }
-      horario = 1;
-    }
-    else if (res > 0)
-    {
-      if (horario != -1 && horario != 0)
-      {
-        cout << "NO";
-        return 0;
-      }
-      horario = 0;
     }
   }
-  cout << "YES";
+  cout << fixed << setprecision(11) << min; // p imprimir cantidad de decimales específica
 
   return 0;
 }

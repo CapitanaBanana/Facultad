@@ -49,23 +49,48 @@ int main()
   FIN;
   int n;
   cin >> n;
-  tipo min = 1e9;
+  int horario = -1;
   vector<Punto> puntos(n);
+
   for (int i = 0; i < n; ++i)
   {
     cin >> puntos[i].x >> puntos[i].y;
+  }
+  for (int i = 0; i < n; ++i)
+  {
+    Punto current = puntos[i];
+    Punto v1, v2;
+    // SIEMPRE HACER LAS RESTAS CONSISTENTES, de origen a lo otro o del otro a origen
+    if (i == 0) // si estoy en el primero, hago que el anterior sea el último
+      v1 = puntos[n - 1] - current;
+    else
+      v1 = puntos[i - 1] - current;
+    if (i == n - 1)
+      v2 = puntos[0] - current; // si estoy en el último, el anterior es el primero
+    else
+      v2 = puntos[i + 1] - current;
+    tipo res = v1 ^ v2;
 
-    for (int j = 0; j < i; j++)
+    if (res < 0)
     {
-      Punto a = puntos[i] - puntos[j];
-      double dist = (double)a.mod();
-      if (dist < min)
+      if (horario != -1 && horario != 1)
       {
-        min = dist;
+        cout << "NO";
+        return 0;
       }
+      horario = 1;
+    }
+    else if (res > 0)
+    {
+      if (horario != -1 && horario != 0)
+      {
+        cout << "NO";
+        return 0;
+      }
+      horario = 0;
     }
   }
-  cout << fixed << setprecision(11) << min;
+  cout << "YES";
 
   return 0;
 }
