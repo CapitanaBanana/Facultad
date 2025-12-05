@@ -13,7 +13,6 @@ struct DSU
   {
     if (x == parent[x])
       return x;
-
     return parent[x] = find(parent[x]);
   }
   int unite(int x, int y)
@@ -44,16 +43,15 @@ int main()
     v--;
     dsu.unite(u, v);
   }
-  cout << dsu.componentes - 1 << "\n";
-
+  cout << dsu.componentes - 1 << "\n"; // la cant de conexiones que faltan es la cant de comp conexas -1.
+  int root = dsu.find(0);              // tomo el primero como raiz
   for (int i = 1; i < n; i++)
   {
     int ri = dsu.find(i);
-    int root = dsu.find(0);
     if (ri != root)
     {
-      dsu.unite(root, i);
-      cout << root + 1 << " " << i + 1 << "\n";
+      dsu.unite(root, ri);                      // si no están en la misma cc, los uno.
+      cout << root + 1 << " " << i + 1 << "\n"; // imprime la ruta: la raiz y el nodo que le estamos sumando ahora
     }
   }
 }

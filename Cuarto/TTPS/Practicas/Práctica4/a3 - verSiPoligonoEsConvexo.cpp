@@ -73,7 +73,7 @@ int main()
 
     if (res < 0)
     {
-      if (horario != -1 && horario != 1)
+      if (horario != -1 && horario != 1) // horario=1 es horario
       {
         cout << "NO";
         return 0;
@@ -82,7 +82,8 @@ int main()
     }
     else if (res > 0)
     {
-      if (horario != -1 && horario != 0)
+    https:                               // chatgpt.com/
+      if (horario != -1 && horario != 0) // horario en 0 es antihorario
       {
         cout << "NO";
         return 0;
