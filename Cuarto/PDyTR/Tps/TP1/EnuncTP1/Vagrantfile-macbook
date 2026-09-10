@@ -1,0 +1,78 @@
+# =============================================================================
+# TP1 - PDyTR - Vagrantfile para Apple Silicon (arm64)
+# =============================================================================
+# El Vagrantfile original (./Vagrantfile, en esta misma carpeta) usa el provider `virtualbox`
+# con la box `bento/ubuntu-22.04` (x86_64). Ninguno de los dos funciona en un
+# Mac con chip M-series, asi que esta version reemplaza:
+#
+#   virtualbox            ->  qemu (plugin vagrant-qemu, acelerado por HVF)
+#   bento/ubuntu-22.04    ->  perk/ubuntu-2204-arm64 (misma Ubuntu 22.04, aarch64)
+#   red 192.168.56.10/11  ->  red 192.168.105.10/11 (enlace socket punto a punto)
+#
+# El resto (hostnames vma/vmb, carpeta compartida, paquetes provisionados)
+# se mantiene igual que en el enunciado.
+#
+# IMPORTANTE: vma "escucha" el socket y vmb se "conecta", por lo que vma tiene
+# que estar levantada antes que vmb. `vagrant up` respeta el orden de definicion,
+# pero si levantas una sola maquina a mano, empeza siempre por vma.
+# =============================================================================
+
+SOCKET_PORT = 12399
+
+IPS = {
+  "vma" => "192.168.105.10",
+  "vmb" => "192.168.105.11",
+}
+
+PROVISION = <<-SHELL
+  set -e
+  export DEBIAN_FRONTEND=noninteractive
+
+  # Get updated urls/packages sources & tools
+  apt-get update
+
+  # Get several software packages including gcc and java
+  apt-get install -y net-tools joe zip build-essential default-jdk rsync
+
+  # The alias for ls
+  grep -q "alias ls='ls -la'" /home/vagrant/.bashrc || echo -e "\\nalias ls='ls -la'" >> /home/vagrant/.bashrc
+
+  # Resolucion de nombres entre las dos VMs
+  grep -q "[[:space:]]vma$" /etc/hosts || echo "#{IPS['vma']} vma" >> /etc/hosts
+  grep -q "[[:space:]]vmb$" /etc/hosts || echo "#{IPS['vmb']} vmb" >> /etc/hosts
+SHELL
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "perk/ubuntu-2204-arm64"
+  config.vm.box_check_update = false
+
+  # El provider qemu comparte carpetas por SMB (pide password del host).
+  # Desactivamos el /vagrant por defecto y usamos rsync para el codigo del TP.
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  ["vma", "vmb"].each do |name|
+    config.vm.define name, primary: (name == "vma") do |machine|
+      machine.vm.hostname = name
+      machine.vm.network "private_network", ip: IPS[name]
+
+      machine.vm.synced_folder "..", "/home/vagrant/tp1",
+        type: "rsync",
+        rsync__exclude: [".vagrant/", "*.log", "*.pptx", "*.pdf"]
+
+      machine.vm.provider "qemu" do |qe|
+        qe.memory = "1G"
+        qe.smp    = "2"
+        qe.ssh_auto_correct = true
+
+        # Segunda placa de red para el private_network, sin necesidad de sudo:
+        # vma abre el socket, vmb se conecta a el.
+        qe.advanced_network = true
+        qe.net_mode         = :socket
+        qe.socket_opts      = name == "vma" ? "listen=127.0.0.1:#{SOCKET_PORT}" \
+                                            : "connect=127.0.0.1:#{SOCKET_PORT}"
+      end
+
+      machine.vm.provision "shell", inline: PROVISION
+    end
+  end
+end

@@ -1,0 +1,25 @@
+Vagrant.configure("2") do |config|
+  # Base box, a simple/reduced one 
+  config.vm.box = "hashicorp/bionic64"
+
+  # Set memory size
+  config.vm.provider "virtualbox" do |vb|
+    vb.memory = "512"
+    vb.name = "MinUbuntu2"
+  end
+
+  # Bridged network
+  config.vm.network "public_network"
+
+  # Set hostname
+  config.vm.hostname = "MinUbuntu2"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    # Get updated urls/packages sources? & tools
+    apt-get update
+    apt-get install -y net-tools debconf-utils joe zip libc-dev-bin build-essential nodejs npm
+
+    # The alias for ls
+    grep -q "alias ls='ls -la'" /home/vagrant/.bashrc || echo -e "\\nalias ls='ls -la'" >> /home/vagrant/.bashrc
+  SHELL
+end

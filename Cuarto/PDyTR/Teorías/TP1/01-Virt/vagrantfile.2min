@@ -1,0 +1,25 @@
+Vagrant.configure("2") do |config|
+  2.times do |num|
+    config.vm.define ("vm%01d"  % (num + 1)) do |machine|
+      machine.vm.box = "hashicorp/bionic64"
+      machine.vm.network "public_network"
+      machine.vm.hostname = "vm#{num+1}"
+
+      machine.vm.provider "virtualbox" do |vb|
+        vb.memory = "512"
+        vb.name = "vm#{num+1}"
+      end
+
+      machine.vm.provision "shell", inline: <<-SHELL
+        # Get updated urls/packages sources? & tools
+        apt-get update
+
+        # Get several software packages
+        apt-get install -y net-tools debconf-utils joe zip libc-dev-bin build-essential default-jdk
+
+        # The alias for ls
+        grep -q "alias ls='ls -la'" /home/vagrant/.bashrc || echo -e "\\nalias ls='ls -la'" >> /home/vagrant/.bashrc
+      SHELL
+    end
+  end
+end
