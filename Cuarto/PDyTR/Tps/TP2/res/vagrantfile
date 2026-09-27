@@ -1,12 +1,16 @@
 Vagrant.configure("2") do |config|
-  2.times do |num|
+  config.vm.boot_timeout = 600
+  1.times do |num|
     config.vm.define ("vm%01d"  % (num + 1)) do |machine|
-      machine.vm.box = "alvistack/ubuntu-26.04"
+      # 1. Cambiamos la versión a la más reciente
+      machine.vm.box = "cloud-image/ubuntu-26.04"
       machine.vm.network "public_network"
-      machine.vm.hostname = "vm#{num+1}"
+      # machine.vm.hostname = "vm#{num+1}"
 
       machine.vm.provider "virtualbox" do |vb|
-        vb.memory = "512"
+        # 2. Aumentamos la RAM a 2048 MB para evitar congelamiento de la VM
+        vb.memory = "2048"
+        vb.cpus = 2
         vb.name = "vm#{num+1}"
       end
 
